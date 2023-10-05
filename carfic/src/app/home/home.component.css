@@ -148,3 +148,62 @@ body, h1, p {
     .col-12 {width: 100%;}
   }
   
+
+  /*center slide show*/
+  .garage-slideshow {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px; /* Adjust the width as needed */
+  }
+  
+  .garage-slideshow div {
+    flex: 0 0 100%;
+    transition: transform 0.3s ease-in-out;
+    display: none; /* Hide all images by default */
+  }
+  
+  .garage-slideshow div.active {
+    transform: translateX(0);
+    display: block; /* Show only active image */
+  }
+  
+  .garage-slideshow img {
+    width: 100%;
+    height: auto;
+  }
+  /* Styles for the garage slideshow container */
+.garage-container {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    background-color: #f5f5f5; /* Background color for the container */
+    width: 100%;
+    max-width: 600px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  /* Styles for the garage slideshow */
+  .garage-slideshow {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .garage-slideshow div {
+    flex: 0 0 100%;
+    transition: transform 0.5s ease-in-out;
+    display: none; /* Hide all images by default */
+  }
+  
+  .garage-slideshow div.active {
+    transform: translateX(0);
+    display: block; /* Show only active image */
+  }
+  
+  .garage-slideshow img {
+    width: 100%;
+    height: auto;
+  }
+  
+  
