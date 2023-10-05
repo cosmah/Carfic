@@ -1,0 +1,23 @@
+.garage-slideshow {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px; /* Adjust the width as needed */
+  }
+  
+  .garage-slideshow div {
+    flex: 0 0 100%;
+    transition: transform 0.3s ease-in-out;
+    display: none; /* Hide all images by default */
+  }
+  
+  .garage-slideshow div.active {
+    transform: translateX(0);
+    display: block; /* Show only active image */
+  }
+  
+  .garage-slideshow img {
+    width: 100%;
+    height: auto;
+  }
+  

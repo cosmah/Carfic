@@ -1,1 +1,7 @@
 <p>garage works!</p>
+<p>garage works!</p>
+<div class="garage-slideshow">
+    <div *ngFor="let image of images; let i = index" [class.active]="i === currentIndex">
+      <img [src]="image" alt="Garage Image">
+    </div>
+</div>
