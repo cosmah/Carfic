@@ -1,13 +1,11 @@
-import logo from './logo.svg';
+import React from 'react';
+import RoutingComponent from './components/nav/routes'; // Corrected path
 import './App.css';
-import Home from './components/home';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Home />
-      </header>
+    <div>
+      <RoutingComponent />
     </div>
   );
 }
