@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;700&display=swap");
 
 * {
  box-sizing: border-box;
@@ -13,7 +13,59 @@
  --text-color: hsl(0, 0%, 75%);
  --body-color: hsl(0, 0%, 6%);
  --body-font: "Montserrat", sans-serif;
- --second-font: "Dancing Script", cursive;
+ --second-font: "Dancing Script", cursive;// carfic/src/components/nav/routes.js
+import React from "react";
+import { NavLink } from "react-router-dom";
+import "./routes.css";
+
+const RoutingComponent = () => {
+ return (
+    <header className="header">
+      <nav className="nav container">
+        <NavLink to="/" className="nav__logo">
+          Navigation Bar
+        </NavLink>
+
+        <div className={"nav__menu"} id="nav-menu">
+          <ul className="nav__list">
+            <li className="nav__item">
+              <NavLink to="/" className="nav__link">
+                Home
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink to="/about" className="nav__link">
+                About Us
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink to="/contact" className="nav__link">
+                Contact Us
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink to="/services" className="nav__link">
+                Services
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink to="/spares" className="nav__link">
+                Spare Parts
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink to="/footer" className="nav__link nav__cta">
+                Footer
+              </NavLink>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+ );
+};
+
+export default RoutingComponent;
  --h2-font-size: 1.25rem;
  --small-font-size: 0.813rem;
  --font-semi-bold: 600;
@@ -33,4 +85,4 @@ ul {
 
 a {
  text-decoration: none;
-}
+} */
