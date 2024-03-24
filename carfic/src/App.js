@@ -2,6 +2,7 @@
 import React from "react";
 import "./App.css";
 import RoutingComponent from "./components/nav/routes";
+import { useMediaQuery } from 'react-responsive';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/home";
 import About from "./components/about";
@@ -11,6 +12,7 @@ import Footer from "./components/footer";
 import Spare from "./components/spares";
 
 function App() {
+  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
  return (
     <Router>
       <RoutingComponent />
@@ -22,6 +24,7 @@ function App() {
         <Route path="/spares" element={<Spare />} />
         <Route path="/footer" element={<Footer />} />
       </Routes>
+      {isMobile && <div>This is a mobile device.</div>}
     </Router>
  );
 }
