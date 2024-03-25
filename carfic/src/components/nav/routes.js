@@ -18,7 +18,7 @@ const RoutingComponent = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About Us</Link></li>
         <li><Link to="/contact">Contact Us</Link></li>
-        <li><Link to="/services">Services</Link></li>
+        <li><Link to="/services">Service Center</Link></li>
         <li><Link to="/spares">Spare Parts</Link></li>
       </ul>
       <div className="company-name"><strong>Company Name</strong></div>
