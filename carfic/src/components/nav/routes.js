@@ -4,16 +4,17 @@ import { Link } from 'react-router-dom';
 import "./routes.css";
 
 const RoutingComponent = () => {
- const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
- const toggleMenu = () => {
+  const toggleMenu = () => {
     setIsOpen(!isOpen);
- };
+  };
 
- return (
+  return (
     <nav className="nav-bar">
       <div className="logo">Logo</div>
       <ul className={`nav-links ${isOpen ? "show-menu" : ""}`}>
+        <div className="close" onClick={toggleMenu}>X</div>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About Us</Link></li>
         <li><Link to="/contact">Contact Us</Link></li>
@@ -26,7 +27,7 @@ const RoutingComponent = () => {
         <div className="bar"></div>
       </div>
     </nav>
- );
+  );
 };
 
 export default RoutingComponent;
