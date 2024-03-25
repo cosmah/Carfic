@@ -32,6 +32,14 @@
    color: #bada55;
 }
 
+.nav-bar .company-name {
+   display: none;
+   color: #fff;
+   font-size: 2rem;
+   padding: 2rem;
+   text-align: center;
+ }
+
 /* Responsive Design */
 @media (max-width: 768px) {
    .nav-bar ul {
@@ -95,4 +103,8 @@
    .nav-bar ul.show-menu .close {
        display: block;
    }
+
+   .nav-bar .company-name {
+      display: block;
+    }
 }
