@@ -2,6 +2,9 @@
 import React from 'react';
 import './index.css';
 import logo from '../../assets/image/services-6.png'; // Correcting the path
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faTwitter, faWhatsapp, faTiktok, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 
 const Footer = () => {
  return (
@@ -56,8 +59,17 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© 2023 Axle Foley Autohouse. All rights reserved.</p>
-      </div>
+  <div className="social-icons">
+    <a href="#"><FontAwesomeIcon icon={faFacebook} /></a>
+    <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
+    <a href="#"><FontAwesomeIcon icon={faTwitter} /></a>
+    <a href="#"><FontAwesomeIcon icon={faWhatsapp} /></a>
+    <a href="#"><FontAwesomeIcon icon={faTiktok} /></a>
+    <a href="#"><FontAwesomeIcon icon={faLinkedin} /></a>
+  </div>
+  <p>© 2023 Axle Foley Autohouse. All rights reserved.</p>
+</div>
+
     </footer>
  );
 };

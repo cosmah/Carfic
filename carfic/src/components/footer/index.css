@@ -88,3 +88,20 @@
   max-width: 100%; /* Ensure the image doesn't exceed its container */
   height: auto;
 }
+/* index.css */
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.social-icons a:hover {
+  color: #ccc;
+}
