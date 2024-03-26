@@ -1,53 +1,90 @@
+/* index.css */
+
+/* Footer Container */
+.footer {
+  background-color: #4c667b;
+  color: #fff;
+  padding: 50px 0;
+  position: relative; /* Positioning context for absolute positioning */
+}
+
+/* Footer Content */
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .logo {
-    flex: 1;
-    display: flex;
-    align-items: center;
-  }
-  
-  .footer-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .talk-section {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .contact-section {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  .footer-content a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    .footer-content {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .logo, .footer-section, .talk-section, .contact-section {
-      flex: 1 0 100%;
-      margin: 10px 0;
-    }
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Footer Column */
+.footer-column {
+  flex-basis: calc(25% - 20px); /* 4 columns layout with some spacing */
+  margin-bottom: 20px;
+}
+
+/* Logo */
+.logo h4 {
+  font-size: 24px;
+}
+
+/* Footer Sections */
+.footer-section h5 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin-bottom: 10px;
+}
+
+.footer-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+/* Talk Section */
+.talk-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Contact Section */
+.contact {
+  margin-bottom: 10px;
+}
+
+.hours p {
+  margin: 5px 0;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+
+/* index.css */
+
+/* Logo */
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  height: auto;
+}
