@@ -24,3 +24,16 @@
      0% { opacity: 0; }
      100% { opacity: 1; }
    }
+   
+   /* Responsive styles */
+   @media (max-width: 768px) {
+    .banner {
+       height: 400px; /* Adjust the height for smaller screens */
+    }
+   }
+   
+   @media (max-width: 480px) {
+    .banner {
+       height: 300px; /* Adjust the height for even smaller screens */
+    }
+   }
