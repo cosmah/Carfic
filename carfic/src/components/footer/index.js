@@ -64,17 +64,17 @@ const Footer = () => {
             <h5>Contact</h5>
             <div className="contact">
               <span>
-                <i className="fas fa-phone"></i> &nbsp; +256 20 546 5930
+                <i className="fas fa-phone"></i> &nbsp; +256 786 912172
               </span>
               <span>
-                <i className="fas fa-phone"></i> &nbsp; +256 39 324 8791
+                <i className="fas fa-phone"></i> &nbsp; +256 786 912172
               </span>
               <span>
-                <i className="fas fa-envelope"></i> &nbsp; care@axlefoley.com
+                <i className="fas fa-envelope"></i> &nbsp; care@carfic.com
               </span>
               <span>
-                <i className="fas fa-map-marker-alt"></i> &nbsp; Plot 586, Kira
-                - Kasangati Road
+                <i className="fas fa-map-marker-alt"></i> &nbsp; Plot xxx, Kireka
+                - Jinja Road
               </span>
             </div>
             <div className="hours">
@@ -107,7 +107,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="copyright">
-          <p>© 2023 Axle Foley Autohouse. All rights reserved.</p>
+          <p>© 2024 Carfic  Autohouse. All rights reserved.</p>
         </div>
       </div>
     </footer>
