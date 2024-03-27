@@ -94,6 +94,23 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 30px;
 }
 
 .social-icons a {
@@ -102,6 +119,18 @@
   margin-right: 10px;
 }
 
-.social-icons a:hover {
-  color: #ccc;
+.social-icons a:last-child {
+  margin-right: 0;
+}
+
+/* Paragraph Text */
+/* Copyright Text */
+.copyright {
+  text-align: center;
+}
+
+.copyright p {
+  color: #f70d0d;
+  margin-right: 80px;
+
 }
