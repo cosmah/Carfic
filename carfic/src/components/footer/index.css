@@ -134,3 +134,28 @@
   margin-right: 80px;
 
 }
+/* Existing CSS */
+
+/* ... */
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 50px;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .social-icons {
+    margin-bottom: 20px;
+  }
+}
