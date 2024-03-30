@@ -10,6 +10,7 @@ import Contact from "./components/contact";
 import Services from "./components/services";
 import Footer from "./components/footer";
 import Spare from "./components/spares";
+import Banner from "./components/home/banner/banner";
 
 function App() {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
@@ -23,6 +24,8 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/spares" element={<Spare />} />
         <Route path="/footer" element={<Footer />} />
+        <Route path="*">"404 Not Found"</Route>
+        <Route path="/banner" element={<Banner/>}/>
       </Routes>
       {isMobile && <div>This is a mobile device.</div>}
     </Router>
