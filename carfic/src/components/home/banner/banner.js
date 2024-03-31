@@ -1,11 +1,12 @@
 import React from "react";
 import "./banner.css";
 import lubs from "../../../assets/image/home.jpeg";
+import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const Banner = () => {
   return (
-    <div className="container-fluid my-5">
-      <h2 className="text-center mb-4">Why Our Company?</h2>
+    <div className="container-fluid">
       <div className="banner-row">
         <div className="row">
           <div className="col-md-6 text-div">
@@ -24,6 +25,9 @@ const Banner = () => {
               We prioritize your satisfaction and strive to exceed your
               expectations.
             </p>
+            <Link to="/services">
+              <Button className="button">LEARN MORE</Button>
+            </Link>
           </div>
           <div className="col-md-6 image-div">
             <img src={lubs} alt="Company" />

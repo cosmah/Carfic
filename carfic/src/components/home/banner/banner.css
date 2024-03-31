@@ -1,25 +1,64 @@
-/* .image-div {
-  padding: 0;
-} */
+/* banner.css */
 
-
+.text-div {
+  padding-top: 30px;
+  color: #ffffff; /* Darker text color for better readability */
+  font-size: 2.1rem; /* Slightly larger font size for emphasis */
+  line-height: 1.6; /* Increased line height for better readability */
+  /* Add some padding inside the text div to ensure content is not too close to the edges */
+  padding-left: 20px;
+  /* Optionally, add a background color to make the text stand out */
+  /* background-color: #000102; Light gray background color */
+ }
 .banner-row {
-    padding: 0%;
-    display: flex;
-    margin: 0%;
-    height: 70%;
-    background-color: rgb(22, 19, 19);
-  }
-  
-  .text-div, .image-div {
-    flex-grow: 1;
+  padding: 0 !important;
+  margin: 0 !important;
+}
 
-  }
-  
-  .text-div {
-    color: white;
-  }
-  .image-div img {
-    
-    object-fit: cover;
-  }
+
+
+.image-div {
+  padding: 0 !important;
+  margin: 0 !important;
+  /* width: 500px; */
+  height: 170px;
+}
+
+
+/* banner.css */
+
+.container-fluid {
+  background-color: #171718; /* Light gray background color */
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100%; /* Full width */
+
+ }
+
+
+ 
+ /* Style the image itself */
+ .image-div img {
+  /* Ensure the image is responsive and scales nicely */
+  width: 100%;
+  height: auto;
+  /* Optionally, add some margin or padding to the image */
+ }
+
+ /* Add this to your CSS file, for example, in banner.css */
+
+.button {
+  background-color: transparent; /* Bootstrap primary color */
+  border-color: #ececec; /* Match the background color */
+  color: #f5f4f4; /* White text */
+  padding: 15px 40px; /* Increase padding for better clickable area */
+  font-size: 1.8rem; /* Larger font size */
+  border-radius: 0px; /* Rounded corners */
+  margin-left:30px ; 
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+ }
+ 
+ .button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+ }
