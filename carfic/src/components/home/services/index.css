@@ -1,0 +1,64 @@
+.service-container {
+    display: flex;
+    flex-direction: row; /* Stack children vertically */
+    justify-content: space-between;
+    align-items: center;
+   }
+   
+   .service-image, .service-text {
+    flex: 1; /* Each child will take up half the height */
+   }
+   
+   .service-image img {
+    margin-top: 50px;
+    width: 100%; /* Ensure the image scales nicely */
+    height: auto; /* Maintain the image's aspect ratio */
+   }
+
+   .service-description {
+    font-size: 1.9em; /* Adjust the font size as needed */
+    line-height: 1.6; /* Adjust the line height for better readability */
+   }
+
+   .service-button {
+    background-color: #fafafa; /* Blue background */
+    color: rgb(0, 0, 0); /* White text */
+    border: none; /* Removes the default border */
+    padding: 10px 20px; /* Adds padding */
+    font-size: 16px; /* Adjusts the font size */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering */
+    border: black 1px solid;
+    margin-bottom: 30PX;
+   }
+   
+   .service-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+   }
+
+   /* Base styles for small screens */
+.service-container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between;
+    align-items: center;
+   }
+   
+   .service-image, .service-text {
+    flex: 1; /* Each child will take up half the height */
+   }
+   
+   .service-image img {
+    width: 100%; /* Ensure the image scales nicely */
+    height: auto; /* Maintain the image's aspect ratio */
+   }
+   
+   /* Media query for medium screens and up */
+   @media (min-width: 768px) {
+    .service-container {
+      flex-direction: row; /* Stack children horizontally */
+    }
+   
+    .service-image, .service-text {
+      flex: 1; /* Each child will take up half the width */
+    }
+   }

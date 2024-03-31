@@ -5,6 +5,7 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Banner from './banner/banner';
 import Cards from './cards/card';
+import Service from './services';
 
 const Home = () => {
  return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Header />
       <Cards />
       <Banner/>
+      <Service/>
       <Index />
     </div>
  );
