@@ -1,0 +1,68 @@
+/* Original styles */
+.bg-div {
+  position: relative;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 450px;
+}
+
+.bg-div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../../../assets/image/lounge.jpg") !important;
+  background-size: cover;
+  opacity: 0.3; /* Adjust this value to change the opacity */
+  z-index: -1;
+}
+
+.bg-div h1 {
+  color: #fff8f8;
+  font-size: 5.5em;
+  margin-bottom: 20px;
+}
+
+.bg-div .info {
+  text-align: left;
+  line-height: 1.6;
+  color: #0f0c0c;
+  font-size: 2.5em;
+}
+
+.bg-div .info p {
+  margin-bottom: 20px;
+}
+
+.bg-div .info p:last-child {
+  margin-bottom: 0;
+}
+
+/* Define the class for the text stroke effect */
+.text-stroke {
+font-size: 48px; /* Adjust font size as needed */
+color: #fff; /* Color of the text */
+-webkit-text-stroke: 1px #000; /* Width and color of the stroke */
+text-shadow: 
+  -1px -1px 0 #000,  
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000; /* Simulates the letter border */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+.bg-div {
+  height: auto; /* Adjust height for smaller screens */
+}
+
+.bg-div h1 {
+  font-size: 3em; /* Adjust font size for smaller screens */
+}
+
+.bg-div .info {
+  font-size: 1.5em; /* Adjust font size for smaller screens */
+}
+}
