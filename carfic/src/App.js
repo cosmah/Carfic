@@ -14,6 +14,8 @@ import Banner from "./components/home/banner/banner";
 import Cards from "./components/home/cards/card";
 import Service from "./components/home/services";
 import Lounge from "./components/home/lounge/lounge";
+import AboutUs from "./components/about/about/about";
+
 
 function App() {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
@@ -32,6 +34,7 @@ function App() {
         <Route path="/service" element={<Service/>}/>
         <Route path="/card" element={<Cards/>}/>
         <Route path="/lounge" element={<Lounge/>}/>
+        <Route path="/about-us" element={<AboutUs/>}/>
       </Routes>
       {isMobile && <div>This is a mobile device.</div>}
     </Router>
