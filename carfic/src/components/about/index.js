@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../header';
 import Index from '../footer';
 import AboutUs from './about/about';
 
@@ -7,7 +6,7 @@ import AboutUs from './about/about';
 const About = () => {
  return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <AboutUs/> 
       
       <Index/>
