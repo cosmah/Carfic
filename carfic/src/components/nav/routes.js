@@ -16,10 +16,10 @@ const RoutingComponent = () => {
       <ul className={`nav-links ${isOpen ? "show-menu" : ""}`}>
         <div className="close" onClick={toggleMenu}>X</div>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About Us</Link></li>
-        <li><Link to="/contact">Contact Us</Link></li>
         <li><Link to="/services">Service Center</Link></li>
         <li><Link to="/spares">Spare Parts</Link></li>
+        <li><Link to="/about">About Us</Link></li>
+        <li><Link to="/contact">Contact Us</Link></li>
       </ul>
       <div className="company-name"><strong>Company Name</strong></div>
       <div className="hamburger" onClick={toggleMenu}>
