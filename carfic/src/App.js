@@ -15,6 +15,7 @@ import Cards from "./components/home/cards/card";
 import Service from "./components/home/services";
 import Lounge from "./components/home/lounge/lounge";
 import AboutUs from "./components/about/about/about";
+import Slide from "./components/about/about/slider";
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path="/card" element={<Cards/>}/>
         <Route path="/lounge" element={<Lounge/>}/>
         <Route path="/about-us" element={<AboutUs/>}/>
+        <Route path="/slider" element={<Slide/>}/>
       </Routes>
       {isMobile && <div>This is a mobile device.</div>}
     </Router>

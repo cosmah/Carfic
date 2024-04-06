@@ -5,3 +5,9 @@
   .column {
     flex: 50%;
   }
+
+  .bullet-list {
+    list-style-type: disc; /* This sets the bullet style */
+    color: black;
+    padding-left: 20px; /* This adds some space to the left of the bullets for better readability */
+   }

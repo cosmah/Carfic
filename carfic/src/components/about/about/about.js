@@ -1,41 +1,45 @@
-import React, { useState } from 'react';
-import './about.css';
+import React, { useState } from "react";
+import "./about.css";
+import Slide from "./slider";
 
 const AboutUs = () => {
- const images = [
-    "carfic\\src\\assets\\image\\fic\\5.jpeg",
-    "carfic\\src\\assets\\image\\fic\\20.jpeg",
-    "carfic\\src\\assets\\image\\fic\\43.jpeg",
-    "carfic\\src\\assets\\image\\fic\\37.jpeg",
-    "carfic\\src\\assets\\image\\fic\\34.jpeg"
- ];
-
- const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
- const nextImage = () => {
-    setCurrentImageIndex((currentImageIndex + 1) % images.length);
- };
-
- const prevImage = () => {
-    setCurrentImageIndex((currentImageIndex - 1 + images.length) % images.length);
- };
-
- return (
+  return (
     <div>
-      <h1>About</h1>
-      <p>This is the About page.</p>  
       <div className="row">
         <div className="column">
-          <p>Some text...</p>
+          <h1 className="about-us">About Us</h1>
+
+          <p>
+            Carfic is a leading car service company in Uganda,
+            <br /> offering a wide range of services to ensure your vehicle is
+            in top condition. <br /> Our team of highly skilled professionals is
+            dedicated to providing the best possible service and experience.
+            <br />
+            Whether you need a routine check-up, a repair, or a complete
+            overhaul, Carfic is here to help. <br />
+            We pride ourselves on our commitment to quality, reliability, and
+            customer satisfaction. Explore our services to learn more about what
+            we offer.
+          </p>
+
+          <h2 className="why">Why Choose CarfiC Automotives?</h2>
+          <div className="h2">
+            <ul className="bullet-list">
+              <li>Expert Diagnostics</li>
+              <li>Quality Repairs</li>
+              <li>Timely Service</li>
+              <li>Affordable Pricing</li>
+              <li>Customer Satisfaction</li>
+              <li>Comprehensive Services</li>
+            </ul>
+          </div>
         </div>
         <div className="column">
-          <button onClick={prevImage}>Previous</button>
-          <img src={images[currentImageIndex]} alt="Slide" />
-          <button onClick={nextImage}>Next</button>
+          <Slide />
         </div>
       </div>
     </div>
- );
-}
+  );
+};
 
 export default AboutUs;
