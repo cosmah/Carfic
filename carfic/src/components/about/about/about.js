@@ -9,7 +9,7 @@ const AboutUs = () => {
         <div className="column">
           <h1 className="about-us">About Us</h1>
 
-          <p>
+          <p className="para">
             Carfic is a leading car service company in Uganda,
             <br /> offering a wide range of services to ensure your vehicle is
             in top condition. <br /> Our team of highly skilled professionals is

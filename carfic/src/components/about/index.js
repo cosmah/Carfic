@@ -1,6 +1,7 @@
 import React from 'react';
 import Index from '../footer';
 import AboutUs from './about/about';
+import Cardz from './about/cards';
 
 
 const About = () => {
@@ -8,6 +9,7 @@ const About = () => {
     <div>
       {/* <Header /> */}
       <AboutUs/> 
+      <Cardz/>
       
       <Index/>
     </div>

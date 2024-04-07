@@ -1,0 +1,79 @@
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .card {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: large;
+  }
+  
+  .card h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .core-values-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .core-values-list li {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin-bottom: 10px;
+    font-size: large;
+  }
+  
+  .core-values-list li::before {
+    content: "✔ ";
+    color: green;
+    margin-right: 10px;
+    font-size: large;
+  }
+
+  /* cards.css */
+
+.card-container {
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+ margin: 0 -10px; /* Adjust margin to account for the negative margin on cards */
+}
+
+.card {
+ flex: 1 0 300px; /* Adjust the flex-basis as needed */
+ margin: 10px;
+ padding: 20px;
+ box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+ transition: 0.3s;
+ width: 100%; /* Full width on smaller screens */
+}
+
+.card h2 {
+ margin-bottom: 15px;
+}
+
+.core-values-list {
+ list-style-type: none;
+ padding: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+ .card {
+    flex-basis: 100%; /* Stack cards vertically on smaller screens */
+    margin: 10px; /* Ensure consistent spacing on all sides */
+ }
+}
