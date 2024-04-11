@@ -17,6 +17,9 @@ import Lounge from "./components/home/lounge/lounge";
 import AboutUs from "./components/about/about/about";
 import Slide from "./components/about/about/slider";
 import Cardz from "./components/about/about/cards";
+import Form from "./components/contact/form/form";
+import Map from "./components/contact/map/map";
+import Info from "./components/contact/info/info";
 
 
 function App() {
@@ -39,7 +42,11 @@ function App() {
         <Route path="/about-us" element={<AboutUs/>}/>
         <Route path="/slider" element={<Slide/>}/>
         <Route path="/cards" element={<Cardz/>}/>
+        <Route path="/form" element={<Form/>}/>
+        <Route path="/map" element={<Map/>}/>
+        <Route path="/info" element={<Info/>}/>
       </Routes>
+  
       {isMobile && <div>This is a mobile device.</div>}
     </Router>
  );

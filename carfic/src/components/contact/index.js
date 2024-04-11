@@ -1,13 +1,24 @@
 import React from 'react';
-import Header from '../header';
 import Index from '../footer';
+import Form from './form/form';
+import Info from './info/info';
+import Map from './map/map';
 
 const Contact = () => {
  return (
     <div>
-      <Header />
-      <h1>Welcome to the contact Us</h1>
-      <p>This is a simple React component for the contact Us.</p>
+      <div className="row">
+        <div className="column">
+          {/* Content for the first column */}
+          <Info/>
+        
+        </div>
+        <div className="column">
+          {/* Content for the second column */}
+          <Form />
+        </div>
+      </div>
+      <Map/>
       <Index />
     </div>
  );

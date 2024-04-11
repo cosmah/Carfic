@@ -1,4 +1,4 @@
-
+  
 import React, { useState, useEffect } from 'react';
 
 import car from '../../../assets/image/fic/4.jpeg';
