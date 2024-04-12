@@ -29,10 +29,21 @@
   .contact-us .social-media-icons {
     margin-top: 20px;
   }
+
   
-  .contact-us .social-media-icons i {
-    font-size: 18px;
-    margin-right: 10px;
-    color: #333;
-  }
-  
+  .social-media-icons {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    gap: 16px; /* Adjust the gap as needed */
+   }
+   
+   .social-media-icons .fa-icon {
+    font-size:90px; /* Adjust the size as needed */
+    color: #007bff; /* Adjust the color as needed */
+    cursor: pointer; /* Makes the icons clickable */
+   }
+   
+   .social-media-icons .fa-icon:hover {
+    color: #0056b3; /* Darker shade for hover effect */
+   }
