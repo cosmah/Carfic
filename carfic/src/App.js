@@ -18,7 +18,7 @@ import AboutUs from "./components/about/about/about";
 import Slide from "./components/about/about/slider";
 import Cardz from "./components/about/about/cards";
 import Form from "./components/contact/form/form";
-import Map from "./components/contact/map/map";
+import MapContainer from "./components/contact/map/map";
 import Info from "./components/contact/info/info";
 
 
@@ -43,7 +43,7 @@ function App() {
         <Route path="/slider" element={<Slide/>}/>
         <Route path="/cards" element={<Cardz/>}/>
         <Route path="/form" element={<Form/>}/>
-        <Route path="/map" element={<Map/>}/>
+        <Route path="/map" element={<MapContainer/>}/>
         <Route path="/info" element={<Info/>}/>
       </Routes>
   

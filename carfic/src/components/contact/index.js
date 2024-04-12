@@ -2,7 +2,8 @@ import React from 'react';
 import Index from '../footer';
 import Form from './form/form';
 import Info from './info/info';
-import Map from './map/map';
+import MapContainer from './map/map';
+import './index.css'
 
 const Contact = () => {
  return (
@@ -18,7 +19,7 @@ const Contact = () => {
           <Form />
         </div>
       </div>
-      <Map/>
+      <MapContainer className="map-container" />
       <Index />
     </div>
  );
