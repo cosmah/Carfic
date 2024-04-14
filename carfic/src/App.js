@@ -1,4 +1,5 @@
-// App.js
+
+  // App.js
 import React from "react";
 import "./App.css";
 import RoutingComponent from "./components/nav/routes";
@@ -18,7 +19,7 @@ import AboutUs from "./components/about/about/about";
 import Slide from "./components/about/about/slider";
 import Cardz from "./components/about/about/cards";
 import Form from "./components/contact/form/form";
-import MapContainer from "./components/contact/map/map";
+import SimpleMap from "./components/contact/map/map";
 import Info from "./components/contact/info/info";
 
 
@@ -43,7 +44,7 @@ function App() {
         <Route path="/slider" element={<Slide/>}/>
         <Route path="/cards" element={<Cardz/>}/>
         <Route path="/form" element={<Form/>}/>
-        <Route path="/map" element={<MapContainer/>}/>
+        <Route path="/map" element={<SimpleMap/>}/>
         <Route path="/info" element={<Info/>}/>
       </Routes>
   

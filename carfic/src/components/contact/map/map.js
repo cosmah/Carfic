@@ -1,65 +1,28 @@
-import React from 'react';
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import React, { useEffect, useState } from 'react';
+import { GmpxApiLoader, GmpxStoreLocator } from '@googlemaps/extended-component-library'; // Import components directly
 
-export class MapContainer extends React.Component {
- constructor(props) {
-    super(props);
-    this.state = {
-      selectedPlace: {
-        name: '',
-        location: {
-          lat: 0,
-          lng: 0,
-        },
-      },
+const Locator = ({ apiKey }) => {
+  const [apiLoaded, setApiLoaded] = useState(false);
+
+  useEffect(() => {
+    const loadGoogleMaps = async () => {
+      try {
+        await GmpxApiLoader.load(apiKey);
+        setApiLoaded(true);
+      } catch (error) {
+        console.error('Error loading Google Maps API:', error);
+      }
     };
- }
 
- onMarkerClick = (props, marker, e) => {
-    this.setState({
-      selectedPlace: {
-        name: props.name,
-        location: marker.position,
-      },
-    });
- };
+    loadGoogleMaps();
+  }, [apiKey]);
 
- onInfoWindowClose = () => {
-    this.setState({
-      selectedPlace: {
-        name: '',
-        location: {
-          lat: 0,
-          lng: 0,
-        },
-      },
-    });
- };
+  return (
+    <div>
+      <GmpxApiLoader apiKey={apiKey} />
+      {apiLoaded && <GmpxStoreLocator mapId="f573af87ada0a299" />}
+    </div>
+  );
+};
 
- render() {
-    return (
-      <Map google={this.props.google} zoom={14} initialCenter={{ lat: 47.444, lng: -122.176 }}>
-        <Marker
-          onClick={this.onMarkerClick}
-          name={'Current location'}
-          position={{ lat: 47.444, lng: -122.176 }}
-        />
-
-        {this.state.selectedPlace.name && (
-          <InfoWindow
-            onClose={this.onInfoWindowClose}
-            position={this.state.selectedPlace.location}
-          >
-            <div>
-              <h1>{this.state.selectedPlace.name}</h1>
-            </div>
-          </InfoWindow>
-        )}
-      </Map>
-    );
- }
-}
-
-export default GoogleApiWrapper({
- apiKey: 'AIzaSyB2zVgM_dD8x_Jt15NzU1fLN31DGD_8Rzg',
-})(MapContainer);
+export default Locator;

@@ -2,10 +2,11 @@ import React from 'react';
 import Index from '../footer';
 import Form from './form/form';
 import Info from './info/info';
-import MapContainer from './map/map';
+import Locator from './map/map';
 import './index.css'
 
 const Contact = () => {
+  const apiKey = 'AIzaSyB2zVgM_dD8x_Jt15NzU1fLN31DGD_8Rzg';
  return (
     <div>
       <div className="row">
@@ -19,8 +20,10 @@ const Contact = () => {
           <Form />
         </div>
       </div>
-      <MapContainer className="map-container" />
-      <Index />
+     
+      <Locator apiKey={apiKey} />
+        <Index />
+      
     </div>
  );
 };
