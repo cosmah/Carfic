@@ -1,28 +1,35 @@
+/* global google */
 import React, { useEffect, useState } from 'react';
-import { GmpxApiLoader, GmpxStoreLocator } from '@googlemaps/extended-component-library'; // Import components directly
+import { Loader } from '@googlemaps/js-api-loader';
 
 const Locator = ({ apiKey }) => {
-  const [apiLoaded, setApiLoaded] = useState(false);
+ const [map, setMap] = useState(null);
 
-  useEffect(() => {
+ useEffect(() => {
     const loadGoogleMaps = async () => {
       try {
-        await GmpxApiLoader.load(apiKey);
-        setApiLoaded(true);
+        const loader = new Loader({
+          apiKey: apiKey,
+          version: 'weekly',
+        });
+
+        await loader.load();
+        const mapInstance = new google.maps.Map(document.getElementById('map'), {
+          center: { lat: -34.397, lng: 150.644 },
+          zoom: 8,
+        });
+        setMap(mapInstance);
       } catch (error) {
         console.error('Error loading Google Maps API:', error);
       }
     };
 
     loadGoogleMaps();
-  }, [apiKey]);
+ }, [apiKey]);
 
-  return (
-    <div>
-      <GmpxApiLoader apiKey={apiKey} />
-      {apiLoaded && <GmpxStoreLocator mapId="f573af87ada0a299" />}
-    </div>
-  );
+ return (
+    <div id="map" style={{ width: '100%', height: '100vh' }}></div>
+ );
 };
 
 export default Locator;
