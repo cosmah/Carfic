@@ -6,7 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import garage from "../../../assets/image/garage.jpg";
+import garage from "../../../assets/image/fic/10.jpeg";
 import lubs from "../../../assets/image/lubs.jpg";
 import spares from "../../../assets/image/auto03pix.jpg";
 import { styled } from '@mui/system'; // Import styled from @mui/system
@@ -48,21 +48,21 @@ export default function Cards() {
         <MediaCard
           image={garage}
           title="Garage"
-          description="A place where cars are repaired and maintained."
+          description="Our state-of-the-art garage is equipped with the latest diagnostic tools and repair equipment. We specialize in comprehensive car repairs, from routine maintenance to complex engine overhauls."
         />
       </Grid>
       <Grid item xs={12} sm={6} md={4}>
         <MediaCard
           image={lubs}
           title="Lubs"
-          description="Lubricants and oils for your vehicle."
+          description="At our service center, we offer a wide range of high-quality lubricants and oils for all your vehicle needs. From engine oils to transmission fluids, we carry a variety of products to ensure your engine runs smoothly and efficiently."
         />
       </Grid>
       <Grid item xs={12} sm={6} md={4}>
         <MediaCard
           image={spares}
           title="Spares"
-          description="Various parts and accessories for your car."
+          description="We carry a vast selection of genuine spare parts and accessories for a wide range of vehicles. Whether you need a replacement part for your car's engine, transmission, or electrical system, we've got you covered."
         />
       </Grid>
     </Grid>
