@@ -18,18 +18,18 @@ const Info = () => {
         Trust us for a thorough and reliable automotive experience
       </p>
       <address>
-        Plot 586, Kira - Kasangati Road
+      Kireka ,opposite kireka police station Kireka, Nakibugwe building first floor room 17
         <br />
-        Monday - Friday: 08:00 - 17:00
+        Monday - Friday: 08:00 am - 06:00 pm
         <br />
-        Saturday: 08:00 - 13:00
+        Saturday, 8 am – 6:30 pm
         <br />
-        Sundays & Public Holidays Closed
+        Sunday, 8:30 am – 3 pm
       </address>
       <p className="phone-numbers">
-        +256 20 546 5930
+        +256 786912172
         <br />
-        +256 39 324 8791
+        {/* +256 39 324 8791 */}
       </p>
       <p className="email">care@axlefoley.com</p>
       <div className="social-media-icons">

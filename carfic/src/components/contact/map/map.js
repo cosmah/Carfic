@@ -1,6 +1,7 @@
 /* global google */
 import React, { useEffect, useState } from 'react';
 import { Loader } from '@googlemaps/js-api-loader';
+import './map.css';
 
 const Locator = ({ apiKey }) => {
  const [map, setMap] = useState(null);

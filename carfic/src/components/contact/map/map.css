@@ -1,0 +1,6 @@
+/* map.css */
+@media (max-width: 768px) {
+    #map {
+       height: 50vh; /* Adjust the height as needed */
+    }
+   }
