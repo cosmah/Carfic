@@ -21,7 +21,7 @@ const RoutingComponent = () => {
         <li><Link to="/about">About Us</Link></li>
         <li><Link to="/contact">Contact Us</Link></li>
       </ul>
-      <div className="company-name"><strong>Company Name</strong></div>
+      <div className="company-name"><strong>Carfic AutoRepairs</strong></div>
       <div className="hamburger" onClick={toggleMenu}>
         <div className="bar"></div>
         <div className="bar"></div>
