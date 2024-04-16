@@ -1,74 +1,70 @@
-import React from "react";
-import { Card, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import Grid from "@mui/material/Grid";
 import garage from "../../../assets/image/garage.jpg";
 import lubs from "../../../assets/image/lubs.jpg";
 import spares from "../../../assets/image/auto03pix.jpg";
-import "./card.css";
+import { styled } from '@mui/system'; // Import styled from @mui/system
+import './card.css'; // Import the CSS file
 
-const Cards = () => {
-  return (
-    <div className="container">
-      <div className="row justify-content-around p-0 m-0">
-        {/* Column 1 */}
-        <div className="col-12 col-md-4 mb-4">
-          <Card className="card">
-            <Card.Img variant="top" src={garage} className="card-img-top" />
-            <Card.Body className="card-body">
-              <Card.Title className="card-title">Auto Garage</Card.Title>
-              <Card.Text className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-              <Link to="/services">
-                <Button variant="primary" className="card-button">
-                  Auto Services
-                </Button>
-              </Link>
-            </Card.Body>
-          </Card>
-        </div>
+// Create a styled Button component
+const LargeButton = styled(Button)({
+ padding: '10px 20px', // Adjust padding to make the button larger
+ fontSize: '1rem', // Adjust font size as needed
+});
 
-        {/* Column 2 */}
-        <div className="col-12 col-md-4 mb-4">
-          <Card className="card">
-            <Card.Img variant="top" src={lubs} className="card-img-top" />
-            <Card.Body className="card-body">
-              <Card.Title className="card-title">Lubricants</Card.Title>
-              <Card.Text className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-              <Link to="/spares">
-                <Button variant="primary" className="card-button">
-                  Lubricants
-                </Button>
-              </Link>
-            </Card.Body>
-          </Card>
-        </div>
+const MediaCard = ({ image, title, description }) => (
+ <Card className="card">
+    <CardMedia
+      className="cardMedia"
+      component="img"
+      height="200"
+      image={image}
+      alt={title}
+    />
+    <CardContent>
+      <Typography gutterBottom variant="h5" component="div">
+        {title}
+      </Typography>
+      <Typography variant="body2" color="text.secondary">
+        {description}
+      </Typography>
+    </CardContent>
+    <CardActions>
+      <LargeButton size="large">Learn More</LargeButton>
+    </CardActions>
+ </Card>
+);
 
-        {/* Column 3 */}
-        <div className="col-12 col-md-4 mb-4">
-          <Card className="card">
-            <Card.Img variant="top" src={spares} className="card-img-top" />
-            <Card.Body className="card-body">
-              <Card.Title className="card-title">Spare Parts</Card.Title>
-              <Card.Text className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </Card.Text>
-              <Link to="/services">
-                <Button variant="primary" className="card-button">
-                  Spare Parts
-                </Button>
-              </Link>
-            </Card.Body>
-          </Card>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Cards;
+export default function Cards() {
+ return (
+    <Grid container spacing={2} justifyContent="center">
+      <Grid item xs={12} sm={6} md={4}>
+        <MediaCard
+          image={garage}
+          title="Garage"
+          description="A place where cars are repaired and maintained."
+        />
+      </Grid>
+      <Grid item xs={12} sm={6} md={4}>
+        <MediaCard
+          image={lubs}
+          title="Lubs"
+          description="Lubricants and oils for your vehicle."
+        />
+      </Grid>
+      <Grid item xs={12} sm={6} md={4}>
+        <MediaCard
+          image={spares}
+          title="Spares"
+          description="Various parts and accessories for your car."
+        />
+      </Grid>
+    </Grid>
+ );
+}

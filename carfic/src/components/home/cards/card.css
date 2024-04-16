@@ -1,28 +1,11 @@
+/* Cards.css */
+
 .card {
-    border: none; /* Remove border */
-    border-radius: 0;
-    background-color: transparent; /* Match the background color */
-    margin: 50px;
-    overflow: hidden; /* Prevent image overflow */
-  }
-  
-  .card-content {
-    padding: 15px;
-  }
-  
-  .card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    text-align: center; /* Center text */
-  }
-  
-  .card-text {
-    font-size: 1rem;
-    text-align: center; /* Center text */
-  }
-  
-  .card-button {
-    display: block;
-    padding: 15px 35px;
-  }
-  
+  max-width: 500px; /* Increase the max-width of the card */
+  margin: 25px; /* Adjust the margin as needed */
+ }
+ 
+ .cardMedia {
+  height: 200px; /* Increase the height of the CardMedia component */
+ }
+ 

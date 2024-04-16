@@ -1,39 +1,106 @@
-/* index.css */
 .banner {
-    position: relative;
-    width: 100%;
-    height: 600px; /* Adjust the height as needed */
-    overflow: hidden;
-   }
-   
-   .banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-   }
-   
-   .banner img.active {
-    opacity: 1;
-   }
-   
-   /* Keyframes for the slide animation */
-   @keyframes slide {
-     0% { opacity: 0; }
-     100% { opacity: 1; }
-   }
-   
-   /* Responsive styles */
-   @media (max-width: 768px) {
-    .banner {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100vh; /* Use viewport height for full screen */
+   overflow: hidden;
+   position: relative;
+  }
+.slogan-container {
+   position: absolute;
+   bottom: 60%; /* Positions the bottom edge to the middle of the banner */
+   left: 0;
+   background-color: rgba(255, 255, 255, 0.5); 
+   padding-left: 4.5rem;
+   color: black;
+   text-align: left; /* Aligns the text to the l/eft */
+   transform: translateY(50%); /* Moves the slogan-container up by half its height */
+}
+
+.slogan-container h2 {
+   font-size: 5rem; /* Adjust as needed */
+   font-weight: bolder;
+}
+
+.banner img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   position: absolute;
+   opacity: 0;
+   transition: opacity 1s ease-in-out;
+}
+
+.banner img.active {
+   opacity: 1;
+}
+
+.cta-button {
+   position: absolute;
+   bottom: 30%; /* Adjust as needed */
+   left: 0;
+   background-color: #b1a327; /* Blue background */
+   color: rgb(0, 0, 0); /* White text */
+   border: none; /* Removes the default border */
+   padding: 20px 60px; /* Adds padding */
+   font-size: 16px; /* Adjusts the font size */
+   cursor: pointer; /* Changes the cursor to a pointer when hovering */
+   border: none;
+   margin-bottom: 30px;
+   margin-left: 50px;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+   .banner {
        height: 400px; /* Adjust the height for smaller screens */
-    }
    }
-   
-   @media (max-width: 480px) {
-    .banner {
+}
+
+@media (max-width: 480px) {
+   .banner {
        height: 300px; /* Adjust the height for even smaller screens */
-    }
    }
+}
+
+.slogan-container {
+   background-color: rgba(255, 255, 255, 0.5);
+   padding: 20px;
+   text-align: left;
+   border-radius: 10px;
+   width: 80%; /* Adjust width as needed */
+   margin: 0 auto; /* Centers the container */
+  }
+  
+  .slogan-container h2 {
+   font-size: 2rem; /* Adjust font size for better responsiveness */
+   font-weight: bolder;
+  }
+  
+/* Responsive styles */
+@media (max-width: 768px) {
+   .slogan-container {
+      padding: 10px; /* Adjust padding for smaller screens */
+   }
+   .slogan-container h2 {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+   }
+   .cta-button {
+      padding: 20px 40px; /* Adjust padding for smaller screens */
+      font-size: 0.8rem; /* Adjust font size for smaller screens */
+   }
+  }
+  
+  @media (max-width: 480px) {
+   .slogan-container {
+      padding: 5px; /* Adjust padding for even smaller screens */
+   }
+   .slogan-container h2 {
+      font-size: 1rem; /* Adjust font size for even smaller screens */
+   }
+   .cta-button {
+      padding: 15px 40px; /* Adjust padding for even smaller screens */
+      font-size: 0.7rem; /* Adjust font size for even smaller screens */
+   }
+  }

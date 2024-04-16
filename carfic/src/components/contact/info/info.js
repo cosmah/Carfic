@@ -31,7 +31,7 @@ const Info = () => {
         <br />
         {/* +256 39 324 8791 */}
       </p>
-      <p className="email">care@axlefoley.com</p>
+      <p className="email">care@carfic.com</p>
       <div className="social-media-icons">
         <a
           href="https://www.facebook.com/yourusername"
