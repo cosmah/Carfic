@@ -8,26 +8,26 @@ import spares1 from '../../assets/image/spares1.png';
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const images = [cranks, lubs, mec, spares1];
-  const slogans = [
+ const images = [cranks, lubs, mec, spares1];
+ const slogans = [
      "Experience the best automotive services",
      "Your trusted partner for automotive needs",
      "Quality and reliability in every service",
      "Driving your dreams forward",
-  ];
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [currentSloganIndex, setCurrentSloganIndex] = useState(0); // Add this line
+ ];
+ const [currentImageIndex, setCurrentImageIndex] = useState(0);
+ const [currentSloganIndex, setCurrentSloganIndex] = useState(0);
  
-  useEffect(() => {
+ useEffect(() => {
      const timer = setInterval(() => {
        setCurrentImageIndex((currentImageIndex + 1) % images.length);
        setCurrentSloganIndex((currentSloganIndex + 1) % slogans.length);
-     }, 5000); // Change image and slogan every 5 seconds
+     }, 5000);
+     
+     return () => clearInterval(timer);
+ }, [currentImageIndex, currentSloganIndex, images.length, slogans.length]);
  
-     return () => clearInterval(timer); // Clean up on component unmount
-  }, [currentImageIndex, currentSloganIndex, images.length, slogans.length]);
- 
-  return (
+ return (
     <div className="banner">
       {images.map((image, index) => (
         <img
@@ -42,14 +42,15 @@ const Header = () => {
         />
       ))}
       <div className="slogan-container">
-        <h2>{slogans[currentSloganIndex]}</h2>
+        {slogans.map((slogan, index) => (
+          <h2 key={index} style={index === slogans.length - 1 ? {fontWeight: 'bold'} : {}}>{slogan}</h2>
+        ))}
+        <Link to="/services">
+          <button className="cta-button">BOOK A SERVICE</button>
+        </Link>
       </div>
-      <Link to="/services">
-        <button className="cta-button">BOOK A SERVICE</button>
-      </Link>
-
     </div>
-  );
- };
+ );
+}
 
 export default Header;

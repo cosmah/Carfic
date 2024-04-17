@@ -11,6 +11,7 @@ import {
   faTiktok,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -24,27 +25,25 @@ const Footer = () => {
         </div>
 
         {/* Links Column */}
+
         <div className="footer-column links-column">
           <div className="footer-section links">
-            <h5>Links</h5>
+            <h5>Quick links</h5>
             <ul>
               <li>
-                <a href="#">Service Center</a>
+                <Link to="/services">Service Center</Link>
               </li>
               <li>
-                <a href="#">Auto Parts</a>
+                <Link to="/spares">Auto Parts</Link>
               </li>
               <li>
-                <a href="#">About us</a>
+                <Link to="/about">About us</Link>
               </li>
               <li>
-                <a href="#">Appointment</a>
+                <Link to="/services">Appointment</Link>
               </li>
               <li>
-                <a href="#">Blog</a>
-              </li>
-              <li>
-                <a href="#">Contact</a>
+                <Link to="/contact">Contact</Link>
               </li>
             </ul>
           </div>
@@ -73,8 +72,7 @@ const Footer = () => {
                 <i className="fas fa-envelope"></i> &nbsp; care@carfic.com
               </span>
               <span>
-                <i className="fas fa-map-marker-alt"></i> &nbsp; Plot xxx, Kireka
-                - Jinja Road
+                <i className="fas fa-map-marker-alt"></i> &nbsp;   Kireka, Nakibugwe building first floor room 17
               </span>
             </div>
             <div className="hours">
@@ -107,7 +105,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="copyright">
-          <p>© 2024 Carfic  Autohouse. All rights reserved.</p>
+          <p>© 2024 Carfic Autohouse. All rights reserved.</p>
         </div>
       </div>
     </footer>
