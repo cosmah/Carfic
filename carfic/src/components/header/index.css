@@ -9,27 +9,24 @@
    position: relative;
 }
 
-.slogan-container {
+.banner .slogans {
    position: absolute;
-   bottom: 60%; /* Positions the bottom edge to the middle of the banner */
-   left: 0;
-   background-color: rgba(255, 255, 255, 0.5); 
-   padding-left: 4.5rem;
-   color: black;
-   text-align: left; /* Aligns the text to the l/eft */
-   transform: translateY(50%); /* Moves the slogan-container up by half its height */
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   width: 80%;
-   margin: 0 auto;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: left;
+   z-index: 2;
+   color: white;
+   font-size: 3rem;
+   width: 80%; /* Adjust as needed */
+   margin-bottom: 3em; /* Add margin at the bottom of the slogans div */
 }
 
-.slogan-container h2 {
-   font-size: 5rem; /* Adjust as needed */
-   font-weight: bolder;
-   padding: 14px;
-   margin-bottom: 10px; /* Add some space between the slogan and the button */
+.banner .slogans button {
+   font-size: 1em; /* Set font size relative to parent */
+   background-color: #ffca37;
+   padding: 0.5em 1em; /* Set padding relative to font size */
+   margin-top: 1em; /* Set margin top relative to font size */
 }
 
 .banner img {
@@ -45,36 +42,20 @@
    opacity: 1;
 }
 
-.cta-button {
-   position: absolute;
-   bottom: 30%; /* Adjust as needed */
-   left: 0;
-   background-color: #b1a327; /* Blue background */
-   color: rgb(0, 0, 0); /* White text */
-   border: none; /* Removes the default border */
-   padding: 20px 60px; /* Adds padding */
-   font-size: 16px; /* Adjusts the font size */
-   cursor: pointer; /* Changes the cursor to a pointer when hovering */
-   border: none;
-   margin-bottom: 30px;
-   margin-left: 50px;
-}
-
 /* Responsive styles */
 @media (max-width: 768px) {
    .banner {
        height: 400px; /* Adjust the height for smaller screens */
    }
-   .slogan-container {
-      padding: 10px; /* Adjust padding for smaller screens */
-      width: 90%;
+   .banner .slogans {
+       font-size: 2rem;
+       width: 90%;
+       top: 70%; /* Adjust vertical position */
    }
-   .slogan-container h2 {
-      font-size: 1.5rem; /* Adjust font size for smaller screens */
-   }
-   .cta-button {
-      padding: 20px 40px; /* Adjust padding for smaller screens */
-      font-size: 0.8rem; /* Adjust font size for smaller screens */
+   .banner .slogans button {
+       font-size: 0.8em; /* Further reduce font size */
+       padding: 0.3em 0.7em; /* Further reduce padding */
+       margin-top: 0.5em; /* Reduce margin top */
    }
 }
 
@@ -82,15 +63,26 @@
    .banner {
        height: 300px; /* Adjust the height for even smaller screens */
    }
-   .slogan-container {
-      padding: 5px; /* Adjust padding for even smaller screens */
-      width: 95%;
+   .banner .slogans {
+       font-size: 1.5rem;
+       width: 95%;
+       top: 80%; /* Adjust vertical position */
+       text-align: center;
+       margin-bottom: 1.5em; /* Add margin at the bottom for smaller screens */
    }
-   .slogan-container h2 {
-      font-size: 1rem; /* Adjust font size for even smaller screens */
+   .banner .slogans button {
+       font-size: 0.6em; /* Further reduce font size */
+       padding: 0.2em 0.5em; /* Further reduce padding */
+       margin-top: 0.3em; /* Reduce margin top */
+       position: relative;
    }
-   .cta-button {
-      padding: 15px 40px; /* Adjust padding for even smaller screens */
-      font-size: 0.7rem; /* Adjust font size for even smaller screens */
-   }
+}
+
+.emphasis {
+   font-weight: bolder;
+   font-size: 5rem;
+}
+
+.paragraph {
+   background-color: rgba(165, 165, 165, 0.5); /* 50% opacity */
 }
