@@ -9,3 +9,6 @@
   height: 200px; /* Increase the height of the CardMedia component */
  }
  
+ .description {
+  font-size: 18px; /* Adjust this value to your liking */
+}

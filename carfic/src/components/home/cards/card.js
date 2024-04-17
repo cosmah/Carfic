@@ -9,17 +9,17 @@ import Grid from "@mui/material/Grid";
 import garage from "../../../assets/image/fic/10.jpeg";
 import lubs from "../../../assets/image/lubs.jpg";
 import spares from "../../../assets/image/auto03pix.jpg";
-import { styled } from '@mui/system'; // Import styled from @mui/system
-import './card.css'; // Import the CSS file
+import { styled } from "@mui/system"; // Import styled from @mui/system
+import "./card.css"; // Import the CSS file
 
 // Create a styled Button component
 const LargeButton = styled(Button)({
- padding: '10px 20px', // Adjust padding to make the button larger
- fontSize: '1rem', // Adjust font size as needed
+  padding: "10px 20px", // Adjust padding to make the button larger
+  fontSize: "1rem", // Adjust font size as needed
 });
 
 const MediaCard = ({ image, title, description }) => (
- <Card className="card">
+  <Card className="card">
     <CardMedia
       className="cardMedia"
       component="img"
@@ -28,21 +28,34 @@ const MediaCard = ({ image, title, description }) => (
       alt={title}
     />
     <CardContent>
-      <Typography gutterBottom variant="h5" component="div">
-        {title}
-      </Typography>
-      <Typography variant="body2" color="text.secondary">
-        {description}
-      </Typography>
+
+<Typography 
+  gutterBottom 
+  variant="h5" 
+  component="div"
+  sx={{ fontSize: '2.8rem' }} // Increase the font size of the title
+>
+  {title}
+</Typography>
+
+<Typography
+  variant="body2"
+  color="textSecondary"
+  component="p"
+  className="description"
+  sx={{ fontSize: '1.6rem' }} // Increase the font size of the description
+>
+  {description}
+</Typography>
     </CardContent>
     <CardActions>
-      <LargeButton size="large">Learn More</LargeButton>
+      <LargeButton size="larger">Learn More</LargeButton>
     </CardActions>
- </Card>
+  </Card>
 );
 
 export default function Cards() {
- return (
+  return (
     <Grid container spacing={2} justifyContent="center">
       <Grid item xs={12} sm={6} md={4}>
         <MediaCard
@@ -66,5 +79,5 @@ export default function Cards() {
         />
       </Grid>
     </Grid>
- );
+  );
 }
