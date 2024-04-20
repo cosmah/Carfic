@@ -41,7 +41,6 @@ const Header = () => {
           <p>Quality and reliability in every service</p>
           <p className="emphasis">Driving your dreams forward</p>
         </div>
-
         <Link to="/services">
           <button>Book a Service</button>
         </Link>

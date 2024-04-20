@@ -9,24 +9,10 @@
    position: relative;
 }
 
-.banner .slogans {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   text-align: left;
-   z-index: 2;
-   color: white;
-   font-size: 3rem;
-   width: 80%; /* Adjust as needed */
-   margin-bottom: 3em; /* Add margin at the bottom of the slogans div */
-}
-
-.banner .slogans button {
-   font-size: 1em; /* Set font size relative to parent */
-   background-color: #ffca37;
-   padding: 0.5em 1em; /* Set padding relative to font size */
-   margin-top: 1em; /* Set margin top relative to font size */
+.banner::after {
+   content: "";
+   display: table;
+   clear: both;
 }
 
 .banner img {
@@ -36,26 +22,64 @@
    position: absolute;
    opacity: 0;
    transition: opacity 1s ease-in-out;
+   z-index: -1; /* This places the images behind the content */
 }
 
 .banner img.active {
    opacity: 1;
 }
 
+.slogans {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   float: left; /* This will float the .slogans div to the left */
+   align-items: center;
+   padding: 20px;
+   text-align: center;
+   z-index: 1; /* Ensure this is in front of the images */
+   background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+   border-radius: 10px; /* Optional: Adds rounded corners */
+   padding: 30px; /* Increase padding for better spacing */
+}
+
+.paragraph {
+   margin-bottom: 20px;
+   font-family: 'Arial', sans-serif;
+   font-size: 40px;
+}
+
+.emphasis {
+   font-size: 40px; /* Adjust the size as needed */
+   color: #333; /* Change the color as needed */
+   font-weight: bold;
+}
+
+button {
+   padding: 10px 40px;
+   font-size:3rem;
+   background-color: #333;
+   color: #fff;
+   border: none;
+   cursor: pointer;
+}
 /* Responsive styles */
 @media (max-width: 768px) {
    .banner {
        height: 400px; /* Adjust the height for smaller screens */
    }
-   .banner .slogans {
-       font-size: 2rem;
-       width: 90%;
-       top: 70%; /* Adjust vertical position */
+
+   .slogans {
+       padding: 15px; /* Decrease padding for smaller screens */
    }
-   .banner .slogans button {
-       font-size: 0.8em; /* Further reduce font size */
-       padding: 0.3em 0.7em; /* Further reduce padding */
-       margin-top: 0.5em; /* Reduce margin top */
+
+   .paragraph, .emphasis {
+       font-size: 30px; /* Decrease font size for smaller screens */
+   }
+
+   button {
+       padding: 5px 20px;
+       font-size: 2rem;
    }
 }
 
@@ -63,26 +87,17 @@
    .banner {
        height: 300px; /* Adjust the height for even smaller screens */
    }
-   .banner .slogans {
+
+   .slogans {
+       padding: 10px; /* Decrease padding for even smaller screens */
+   }
+
+   .paragraph, .emphasis {
+       font-size: 20px; /* Decrease font size for even smaller screens */
+   }
+
+   button {
+       padding: 5px 10px;
        font-size: 1.5rem;
-       width: 95%;
-       top: 80%; /* Adjust vertical position */
-       text-align: center;
-       margin-bottom: 1.5em; /* Add margin at the bottom for smaller screens */
    }
-   .banner .slogans button {
-       font-size: 0.6em; /* Further reduce font size */
-       padding: 0.2em 0.5em; /* Further reduce padding */
-       margin-top: 0.3em; /* Reduce margin top */
-       position: relative;
-   }
-}
-
-.emphasis {
-   font-weight: bolder;
-   font-size: 5rem;
-}
-
-.paragraph {
-   background-color: rgba(165, 165, 165, 0.5); /* 50% opacity */
 }
