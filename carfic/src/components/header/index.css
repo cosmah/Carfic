@@ -2,7 +2,7 @@
    display: flex;
    flex-direction: column;
    justify-content: center;
-   align-items: center;
+   align-items: flex-start; /* Align items to the left */
    width: 100%;
    height: 100vh; /* Use viewport height for full screen */
    overflow: hidden;
@@ -32,17 +32,16 @@
 .slogans {
    display: flex;
    flex-direction: column;
-   justify-content: center;
-   float: left; /* This will float the .slogans div to the left */
+   justify-content: flex-start;
    align-items: center;
    padding: 20px;
+   padding-left: 50px; /* Add some left padding */
    text-align: center;
    z-index: 1; /* Ensure this is in front of the images */
    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
    border-radius: 10px; /* Optional: Adds rounded corners */
    padding: 30px; /* Increase padding for better spacing */
 }
-
 .paragraph {
    margin-bottom: 20px;
    font-family: 'Arial', sans-serif;
