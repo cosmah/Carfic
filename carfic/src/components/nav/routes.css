@@ -5,18 +5,17 @@
    padding: 0;
    box-sizing: border-box;
 }
-
 .nav-bar {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   background-color: #333;
+   background-color: whitesmoke;
    color: #fff;
    padding: 3.5rem;
    z-index: 1000;
-   position: relative;
+   position: sticky; /* Changed from relative to sticky */
+   top: 0; /* Added to stick to the top */
 }
-
 .nav-bar ul {
    list-style: none;
    display: flex;
@@ -24,7 +23,7 @@
 }
 
 .nav-bar li a {
-   color: #fff;
+   color: #000000;
    text-decoration: none;
    transition: color 0.3s ease;
    font-size: 1.2rem;
@@ -36,7 +35,7 @@
 
 .nav-bar .company-name {
    display: none;
-   color: #fff;
+   color: #000000;
    font-size: 2rem;
    padding: 2rem;
    text-align: center;
@@ -49,12 +48,12 @@
    top: 10px;
    left: 10px;
    cursor: pointer;
-   color: #fff;
+   color: #070202;
    font-size: 2rem;
  }
 
  .nav-bar li a {
-   color: #fff;
+   color: #000000;
    text-decoration: none;
    transition: color 0.3s ease;
    font-size: 2rem; /* Adjust this value to a reasonable size for larger screens */
@@ -106,12 +105,13 @@
        display: block;
        width: 25px;
        height: 3px;
-       background-color: #fff;
+       background-color: #000000;
        margin: 5px auto;
    }
 
    .nav-bar .close {
       display: block;
+      color: whitesmoke;
     }
     
 
@@ -123,3 +123,4 @@
       display: block;
     }
 }
+
