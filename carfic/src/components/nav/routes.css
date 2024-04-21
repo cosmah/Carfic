@@ -9,8 +9,8 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   background-color: whitesmoke;
-   color: #fff;
+   background-color: rgb(253, 229, 229);
+   color: #000000;
    padding: 3.5rem;
    z-index: 1000;
    position: sticky; /* Changed from relative to sticky */
@@ -124,3 +124,24 @@
     }
 }
 
+.nav-bar li a span {
+   position: relative;
+   z-index: 1;
+ }
+ .nav-bar li a span::before {
+   content: "";
+   position: absolute;
+   z-index: -1;
+   left: 0;
+   right: 100%;
+   top: 0; /* Changed from bottom to top */
+   background: #bada55;
+   height: 2px; /* Reduced from 70% to 2px */
+   transition-property: right;
+   transition-duration: 0.25s;
+   transition-timing-function: ease-out;
+ }
+ 
+ .nav-bar li a:hover span::before {
+   right: 0;
+ }
