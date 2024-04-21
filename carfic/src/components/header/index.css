@@ -30,6 +30,7 @@
 }
 
 .slogans {
+
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
@@ -53,6 +54,24 @@
    color: #333; /* Change the color as needed */
    font-weight: bold;
 }
+
+.book-service-btn {
+   background-color: #807303; /* Button color */
+   color: #fff; /* Text color */
+   border: none; /* Removes default button border */
+   padding: 10px 30px; /* Button size */
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin-bottom: 10px;
+   cursor: pointer;
+   transition: background-color 0.3s ease; /* Transition effect for hover */
+ }
+ 
+ .book-service-btn:hover {
+   background-color: #f05b51; /* Button color on hover */
+ }
 
 button {
    padding: 10px 40px;
@@ -89,6 +108,8 @@ button {
 
    .slogans {
        padding: 10px; /* Decrease padding for even smaller screens */
+       margin-top: 30px;
+       margin-bottom: 20px;
    }
 
    .paragraph, .emphasis {

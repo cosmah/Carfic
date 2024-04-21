@@ -42,7 +42,7 @@ const Header = () => {
           <p className="emphasis">Driving your dreams forward</p>
         </div>
         <Link to="/services">
-          <button>Book a Service</button>
+          <button className="book-service-btn">Book a Service</button>
         </Link>
       </div>
     </div>
