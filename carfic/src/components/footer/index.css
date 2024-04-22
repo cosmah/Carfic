@@ -132,7 +132,7 @@
 }
 
 .copyright p {
-  color: #f70d0d;
+  color: #eeb8b8;
   margin-right: 80px;
 
 }
@@ -161,3 +161,129 @@
     margin-bottom: 20px;
   }
 }
+
+
+/*-----------------------------------*\
+  #FOOTER
+\*-----------------------------------*/
+
+.footer { color: var(--cadet-blue-creyola); }
+
+.footer .shape { display: none; }
+
+.footer-top { background-color: var(--space-cadet); }
+
+.footer-top .container {
+  display: grid;
+  gap: 40px;
+}
+
+.footer-text { margin-block: 18px 20px; }
+
+.social-list {
+  display: flex;
+  gap: 8px;
+}
+
+.social-link {
+  background-color: var(--oxford-blue-3);
+  padding: 14px;
+  border-radius: var(--radius-circle);
+  transition: var(--transition);
+}
+
+.social-link:is(:hover, :focus-visible) {
+  background-color: var(--international-orange-engineering);
+  transform: translateY(-5px);
+}
+
+.footer .h3 {
+  color: var(--white);
+  margin-block-end: 18px;
+}
+
+.footer-list .p {
+  color: var(--white);
+  font-weight: var(--fw-400);
+  margin-block-end: 7px;
+}
+
+.footer-list li:not(:first-child) { margin-block-start: 16px; }
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-link:is(:hover, :focus-visible) { color: var(--international-orange-engineering); }
+
+.footer-link .material-symbols-rounded {
+  flex-shrink: 0;
+  font-size: 1.8rem;
+  color: var(--international-orange-engineering);
+}
+
+.footer-bottom {
+  background-color: var(--oxford-blue-1);
+  padding-block: 20px;
+}
+
+.copyright {
+  text-align: center;
+  font-size: var(--fs-6);
+}
+
+/* last section of the footer */
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+ }
+ 
+ .social-icons a {
+  color: #fff;
+  font-size: 20px; /* Adjust size as needed */
+  margin: 0 10px; /* Add space between icons */
+  transition: color 0.3s ease;
+ }
+ 
+ .social-icons a:hover {
+  color: #ccc; /* Change color on hover */
+ }
+
+ .copyright {
+
+  color: #fff;
+  font-size: 14px;
+  
+ }
+ .footer-bottom {
+  background-color: rgb(94, 94, 110); /* Set the background color to dark blue */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+ @media (max-width: 768px) {
+  .footer-bottom {
+     flex-direction: column;
+     align-items: center;
+  }
+ 
+  
+ 
+  .social-icons a {
+     font-size: 20px; /* Reduce the size of the icons on small devices */
+     margin: 0px 5px; /* Adjust the spacing between icons */
+     
+  }
+ 
+  .copyright {
+     text-align: center;
+     font-size: 12px; /* Adjust the font size of the copyright text */
+  }
+ }
