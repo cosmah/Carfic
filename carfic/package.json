@@ -1,4 +1,5 @@
 {
+  "homepage": "https://cosmah.github.io/carfic",
   "name": "carfic",
   "version": "0.1.0",
   "private": true,
@@ -30,6 +31,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -53,6 +56,10 @@
     ]
   },
   "devDependencies": {
-    "eslint-plugin-googlemaps": "^1.4.15"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "es-abstract": "^1.23.3",
+    "eslint-plugin-googlemaps": "^1.4.15",
+    "gh-pages": "^6.1.1",
+    "source-map": "^0.7.4"
   }
 }
