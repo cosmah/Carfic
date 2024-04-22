@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Carfic/static/css/main.525bc483.css",
-    "main.js": "/Carfic/static/js/main.5894fd85.js",
+    "main.css": "/Carfic/static/css/main.488b4060.css",
+    "main.js": "/Carfic/static/js/main.29f0ac32.js",
     "static/js/453.01c7acef.chunk.js": "/Carfic/static/js/453.01c7acef.chunk.js",
     "static/media/spares1.png": "/Carfic/static/media/spares1.242b3c43923b2bb38891.png",
     "static/media/mec.png": "/Carfic/static/media/mec.a7437d435b35ffe03ff1.png",
@@ -16,15 +16,16 @@
     "static/media/12.jpeg": "/Carfic/static/media/12.a0c435ad1cd3fd2387a5.jpeg",
     "static/media/10.jpeg": "/Carfic/static/media/10.00a2c84410798fd0c865.jpeg",
     "static/media/lounge.jpg": "/Carfic/static/media/lounge.23bb8a16b3af39ccb417.jpg",
+    "static/media/30.jpeg": "/Carfic/static/media/30.61a20bf8ae8b563494ff.jpeg",
     "static/media/home.jpeg": "/Carfic/static/media/home.acd9dc3c81dccbe2452f.jpeg",
     "static/media/19.jpeg": "/Carfic/static/media/19.73511372281648b1c927.jpeg",
     "index.html": "/Carfic/index.html",
-    "main.525bc483.css.map": "/Carfic/static/css/main.525bc483.css.map",
-    "main.5894fd85.js.map": "/Carfic/static/js/main.5894fd85.js.map",
+    "main.488b4060.css.map": "/Carfic/static/css/main.488b4060.css.map",
+    "main.29f0ac32.js.map": "/Carfic/static/js/main.29f0ac32.js.map",
     "453.01c7acef.chunk.js.map": "/Carfic/static/js/453.01c7acef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.525bc483.css",
-    "static/js/main.5894fd85.js"
+    "static/css/main.488b4060.css",
+    "static/js/main.29f0ac32.js"
   ]
 }
