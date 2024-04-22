@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/carfic/static/css/main.59d94ff4.css",
+    "main.js": "/carfic/static/js/main.d735dc26.js",
+    "static/js/453.01c7acef.chunk.js": "/carfic/static/js/453.01c7acef.chunk.js",
+    "static/media/spares1.png": "/carfic/static/media/spares1.242b3c43923b2bb38891.png",
+    "static/media/mec.png": "/carfic/static/media/mec.a7437d435b35ffe03ff1.png",
+    "static/media/cranks.png": "/carfic/static/media/cranks.0897653f12dfc067cee6.png",
+    "static/media/lubs.png": "/carfic/static/media/lubs.ad1414cd4e7b4a1a8376.png",
+    "static/media/auto03pix.jpg": "/carfic/static/media/auto03pix.0d629b9e1f769fbcf6c9.jpg",
+    "static/media/lubs.jpg": "/carfic/static/media/lubs.cffb77fe363fd73ea2ba.jpg",
+    "static/media/engine.png": "/carfic/static/media/engine.7c56c05ce1f09c224a40.png",
+    "static/media/11.jpeg": "/carfic/static/media/11.c5d03e76952c6f535831.jpeg",
+    "static/media/29.jpeg": "/carfic/static/media/29.1846af756eaf8bfd698d.jpeg",
+    "static/media/4.jpeg": "/carfic/static/media/4.cc981a9daf15da6f5acd.jpeg",
+    "static/media/12.jpeg": "/carfic/static/media/12.a0c435ad1cd3fd2387a5.jpeg",
+    "static/media/10.jpeg": "/carfic/static/media/10.00a2c84410798fd0c865.jpeg",
+    "static/media/lounge.jpg": "/carfic/static/media/lounge.23bb8a16b3af39ccb417.jpg",
+    "static/media/home.jpeg": "/carfic/static/media/home.acd9dc3c81dccbe2452f.jpeg",
+    "static/media/19.jpeg": "/carfic/static/media/19.73511372281648b1c927.jpeg",
+    "index.html": "/carfic/index.html",
+    "main.59d94ff4.css.map": "/carfic/static/css/main.59d94ff4.css.map",
+    "main.d735dc26.js.map": "/carfic/static/js/main.d735dc26.js.map",
+    "453.01c7acef.chunk.js.map": "/carfic/static/js/453.01c7acef.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.59d94ff4.css",
+    "static/js/main.d735dc26.js"
+  ]
+}
