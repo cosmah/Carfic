@@ -21,6 +21,7 @@ import Cardz from "./components/about/about/cards";
 import Form from "./components/contact/form/form";
 import SimpleMap from "./components/contact/map/map";
 import Info from "./components/contact/info/info";
+import Baner from "./components/spares/hello/banner";
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Route path="/form" element={<Form/>}/>
         <Route path="/map" element={<SimpleMap/>}/>
         <Route path="/info" element={<Info/>}/>
+        <Route path="/baner" element={<Baner/>}/>
       </Routes>
   
       {isMobile && <div>This is a mobile device.</div>}
