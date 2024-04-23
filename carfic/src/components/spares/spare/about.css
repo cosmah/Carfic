@@ -1,0 +1,68 @@
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Allows the columns to wrap onto new lines as needed */
+ }
+ 
+ .column {
+  flex: 50%;
+  padding: 20px; /* Adds padding inside the columns for better spacing */
+  box-sizing: border-box; /* Includes padding in the element's total width and height */
+ }
+ 
+ .bullet-list {
+  list-style-type: disc;
+  color: black;
+  padding-left: 20px;
+ }
+ 
+ .h2, .why, .about-us {
+  padding-left: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+ }
+ 
+ .para {
+  padding-left: 40px;
+  margin-top: 30px;
+  font-size: large;
+ }
+ 
+ /* Responsive styles */
+ @media (max-width: 768px) {
+  .column {
+     flex: 100%; /* Stacks the columns vertically on smaller screens */
+     margin-top: 20px; /* Reduces the top margin for better spacing */
+     margin-bottom: 20px; /* Reduces the bottom margin for better spacing */
+  }
+ 
+  .h2, .why, .about-us {
+     padding-left: 15px; /* Reduces the left padding for better spacing */
+     margin-top: 20px; /* Reduces the top margin for better spacing */
+     margin-bottom: 20px; /* Reduces the bottom margin for better spacing */
+  }
+ 
+  .para {
+     padding-left: 20px; /* Reduces the left padding for better spacing */
+     margin-top: 20px; /* Reduces the top margin for better spacing */
+  }
+ }
+
+
+
+
+ .button {
+   background-color: goldenrod; /* Bootstrap primary color */
+   border-color: #ececec; /* Match the background color */
+   color: #f5f4f4; /* White text */
+   padding: 15px 40px; /* Increase padding for better clickable area */
+   font-size: 1.8rem; /* Larger font size */
+   border-radius: 0px; /* Rounded corners */
+   margin-left:50px ; 
+   margin-bottom: 20px;
+   margin-top: 50px;
+ 
+  }
+  
+  .button:hover {
+   background-color: #0056b3; /* Darker shade on hover */
+  }

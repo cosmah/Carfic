@@ -1,14 +1,15 @@
 import React from 'react';
 import Index from '../footer';
 import Baner from './hello/banner';
+import Parts from './spare/about';
 
 
 const Spare = () => {
  return (
     <div>
       <Baner />
-      <h1>Welcome to the spare Page</h1>
-      <p>This is a simple React component for the spare page.</p>
+      <Parts/>
+      
       <Index />
     </div>
  );

@@ -22,6 +22,8 @@ import Form from "./components/contact/form/form";
 import SimpleMap from "./components/contact/map/map";
 import Info from "./components/contact/info/info";
 import Baner from "./components/spares/hello/banner";
+import Parts from "./components/spares/spare/about";
+import Order from "./components/spares/order/order";
 
 
 function App() {
@@ -48,6 +50,8 @@ function App() {
         <Route path="/map" element={<SimpleMap/>}/>
         <Route path="/info" element={<Info/>}/>
         <Route path="/baner" element={<Baner/>}/>
+        <Route path="/parts" element={<Parts/>}/>
+        <Route path="/order" element={<Order/>}/>
       </Routes>
   
       {isMobile && <div>This is a mobile device.</div>}
