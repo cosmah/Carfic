@@ -13,11 +13,6 @@
     top: 0; /* Aligns the image to the top of the container */
    }
 
-
-   .banner-container {
-    position: relative;
-    text-align: center;
-   }
    
    .spare-image {
     position: relative;
@@ -27,14 +22,7 @@
 
    }
    
-   .spare-image h1 {
-    color: white; /* Adjust the color as needed */
-    font-size: 2em; /* Adjust the font size as needed */
-    font-weight: bold; /* Make the h1 text bold */
-    margin-left: 20px; /* Add left margin */
-    margin-top: 20px; /* Add top margin */
-    margin-bottom: 20px; /* Add bottom margin */
-   }
+
    
    /* Adjustments for smaller screens */
    @media (max-width: 768px) {
@@ -46,3 +34,25 @@
        top: -50px; /* Adjust based on the height of your navbar */
     }
    }
+
+
+   .banner-container {
+    position: relative;
+    width: 100%; /* Ensure the container takes full width */
+   }
+   
+   .spare-image {
+    position: relative; /* This is needed for the title to be positioned relative to this container */
+   }
+   
+   .spare-image h1 {
+    padding-left: 130px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left; /* Align text to the left */
+    width: 100%; /* Ensure the title takes full width of the container */
+   }
+   
