@@ -12,6 +12,7 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 const Footer = () => {
   return (
@@ -66,13 +67,13 @@ const Footer = () => {
                 <i className="fas fa-phone"></i> &nbsp; +256 786 912172
               </span>
               <span>
-                <i className="fas fa-phone"></i> &nbsp; +256 786 912172
+                <i className="fas fa-phone"></i> &nbsp; +256 757326751
               </span>
               <span>
                 <i className="fas fa-envelope"></i> &nbsp; care@carfic.com
               </span>
               <span>
-                <i className="fas fa-map-marker-alt"></i> &nbsp;   Kireka, Nakibugwe building first floor room 17
+                <i className="fas fa-map-marker-alt"></i> &nbsp; Kireka Town, Kampala Uganda
               </span>
             </div>
             <div className="hours">

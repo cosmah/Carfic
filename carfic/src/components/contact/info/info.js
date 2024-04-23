@@ -18,7 +18,7 @@ const Info = () => {
         Trust us for a thorough and reliable automotive experience
       </p>
       <address>
-      Kireka ,opposite kireka police station Kireka, Nakibugwe building first floor room 17
+      Kireka Town, Kampala, Uganda
         <br />
         Monday - Friday: 08:00 am - 06:00 pm
         <br />
@@ -29,7 +29,7 @@ const Info = () => {
       <p className="phone-numbers">
         +256 786912172
         <br />
-        {/* +256 39 324 8791 */}
+       +256  757326751
       </p>
       <p className="email">care@carfic.com</p>
       <div className="social-media-icons">
