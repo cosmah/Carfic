@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./routes.css";
+import logo from "../../assets/image/fic/logo2.png";
 
 const RoutingComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,9 @@ const RoutingComponent = () => {
 
   return (
     <nav className="nav-bar">
-      <div className="logo">Logo</div>
+      <div className="logo">
+        <img src={logo} alt="Logo" /> {/* Replace placeholder with logo */}
+      </div>
       <ul className={`nav-links ${isOpen ? "show-menu" : ""}`}>
         <div className="close" onClick={toggleMenu}>
           X

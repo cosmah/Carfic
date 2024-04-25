@@ -1,5 +1,15 @@
 /* routes.css */
 
+.nav-bar .logo {
+  width: 100px; /* Adjust as needed */
+  height: 100px; /* Adjust as needed */
+}
+
+.nav-bar .logo img {
+  width: 100%;
+  height: auto;
+}
+
 * {
    margin: 0;
    padding: 0;

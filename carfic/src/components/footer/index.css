@@ -1,5 +1,20 @@
 /* index.css */
 
+.logo-image {
+  width: 220px; /* Adjust as needed */
+  height:220px; /* Adjust as needed */
+  border-radius: 48%; /* This will make the image round */
+
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
 /* Footer Container */
 .footer {
   background-color: #4c667b;

@@ -1,7 +1,7 @@
 // index.js
 import React from "react";
 import "./index.css";
-import logo from "../../assets/image/services-6.png"; // Correcting the path
+import logo from "../../assets/image/fic/logo.jpeg"; // Correcting the path
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -21,7 +21,7 @@ const Footer = () => {
         {/* Logo Column */}
         <div className="footer-column logo-column">
           <div className="logo">
-            <img src={logo} alt="Carfic Logo" />
+            <img src={logo} alt="Carfic Logo" className="logo-image" />
           </div>
         </div>
 
@@ -73,7 +73,8 @@ const Footer = () => {
                 <i className="fas fa-envelope"></i> &nbsp; care@carfic.com
               </span>
               <span>
-                <i className="fas fa-map-marker-alt"></i> &nbsp; Kireka Town, Kampala Uganda
+                <i className="fas fa-map-marker-alt"></i> &nbsp; Kireka Town,
+                Kampala Uganda
               </span>
             </div>
             <div className="hours">
