@@ -1,12 +1,13 @@
 {
   "files": {
-    "main.css": "/Carfic/static/css/main.a6d8e2a7.css",
-    "main.js": "/Carfic/static/js/main.317df0cd.js",
+    "main.css": "/Carfic/static/css/main.6faa9d0d.css",
+    "main.js": "/Carfic/static/js/main.1d4c71d6.js",
     "static/js/453.01c7acef.chunk.js": "/Carfic/static/js/453.01c7acef.chunk.js",
     "static/media/spares1.png": "/Carfic/static/media/spares1.242b3c43923b2bb38891.png",
     "static/media/mec.png": "/Carfic/static/media/mec.a7437d435b35ffe03ff1.png",
     "static/media/cranks.png": "/Carfic/static/media/cranks.0897653f12dfc067cee6.png",
     "static/media/fa-solid-900.ttf": "/Carfic/static/media/fa-solid-900.bacd5de623fb563b961a.ttf",
+    "static/media/logo2.png": "/Carfic/static/media/logo2.20fc8c2dceef90d36789.png",
     "static/media/lubs.png": "/Carfic/static/media/lubs.ad1414cd4e7b4a1a8376.png",
     "static/media/auto03pix.jpg": "/Carfic/static/media/auto03pix.0d629b9e1f769fbcf6c9.jpg",
     "static/media/fa-brands-400.ttf": "/Carfic/static/media/fa-brands-400.60127e352b7a11f7f1bc.ttf",
@@ -23,6 +24,7 @@
     "static/media/lounge.jpg": "/Carfic/static/media/lounge.23bb8a16b3af39ccb417.jpg",
     "static/media/76.jpeg": "/Carfic/static/media/76.69b3c52ec2e20ef09528.jpeg",
     "static/media/fa-regular-400.ttf": "/Carfic/static/media/fa-regular-400.eb91f7b948a42799f678.ttf",
+    "static/media/logo.jpeg": "/Carfic/static/media/logo.caf9037833c48f4f1a6c.jpeg",
     "static/media/oil.jpeg": "/Carfic/static/media/oil.c49fa0c0ac25409c3c10.jpeg",
     "static/media/60.jpeg": "/Carfic/static/media/60.d9a066abd5d4960d1d0e.jpeg",
     "static/media/home.jpeg": "/Carfic/static/media/home.acd9dc3c81dccbe2452f.jpeg",
@@ -31,12 +33,12 @@
     "static/media/fa-v4compatibility.ttf": "/Carfic/static/media/fa-v4compatibility.c8e090db312b0bea2aa2.ttf",
     "static/media/fa-v4compatibility.woff2": "/Carfic/static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2",
     "index.html": "/Carfic/index.html",
-    "main.a6d8e2a7.css.map": "/Carfic/static/css/main.a6d8e2a7.css.map",
-    "main.317df0cd.js.map": "/Carfic/static/js/main.317df0cd.js.map",
+    "main.6faa9d0d.css.map": "/Carfic/static/css/main.6faa9d0d.css.map",
+    "main.1d4c71d6.js.map": "/Carfic/static/js/main.1d4c71d6.js.map",
     "453.01c7acef.chunk.js.map": "/Carfic/static/js/453.01c7acef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a6d8e2a7.css",
-    "static/js/main.317df0cd.js"
+    "static/css/main.6faa9d0d.css",
+    "static/js/main.1d4c71d6.js"
   ]
 }
