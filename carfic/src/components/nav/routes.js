@@ -46,9 +46,9 @@ const RoutingComponent = () => {
           </Link>
         </li>
       </ul>
-      <div className="company-name">
+      {/* <div className="company-name">
         <strong>Carfic AutoRepairs</strong>
-      </div>
+      </div> */}
       <div className="hamburger" onClick={toggleMenu}>
         <div className="bar"></div>
         <div className="bar"></div>
