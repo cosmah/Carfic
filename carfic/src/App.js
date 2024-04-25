@@ -24,7 +24,9 @@ import Info from "./components/contact/info/info";
 import Baner from "./components/spares/hello/banner";
 import Parts from "./components/spares/spare/about";
 import Order from "./components/spares/order/order";
-
+import Garage from "./components/services/baner/garage";
+import Serve from "./components/services/service/serve";
+import Carousel from "./components/services/carousel/carousel";
 
 function App() {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
@@ -52,6 +54,10 @@ function App() {
         <Route path="/baner" element={<Baner/>}/>
         <Route path="/parts" element={<Parts/>}/>
         <Route path="/order" element={<Order/>}/>
+        <Route path="/garage" element={<Garage/>}/>
+        <Route path="/serve" element={<Serve/>}/>
+        <Route path="/carousel" element={<Carousel/>}/>
+
       </Routes>
   
       {isMobile && <div>This is a mobile device.</div>}

@@ -1,12 +1,13 @@
 import React from 'react';
-import Header from '../header';
 import Index from '../footer';
+import Garage from './baner/garage';
+import Serve from './service/serve';
 
 const Services = () => {
  return (
     <div>
-      <Header />
-      <h1>Welcome to the services</h1>
+      <Garage/>
+      <Serve/>
       <p>This is a simple React component for the services page.</p>
       <Index />
     </div>
