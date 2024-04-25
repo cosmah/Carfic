@@ -27,6 +27,7 @@ import Order from "./components/spares/order/order";
 import Garage from "./components/services/baner/garage";
 import Serve from "./components/services/service/serve";
 import Carousel from "./components/services/carousel/carousel";
+import Booking from "./components/services/booking/booking";
 
 function App() {
   const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
@@ -57,6 +58,7 @@ function App() {
         <Route path="/garage" element={<Garage/>}/>
         <Route path="/serve" element={<Serve/>}/>
         <Route path="/carousel" element={<Carousel/>}/>
+        <Route path="/booking" element={<Booking/>}/>
 
       </Routes>
   

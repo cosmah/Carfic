@@ -156,7 +156,7 @@ const Serve = () => {
             </div>
           </div>
 
-          <Link to="/order">
+          <Link to="/booking">
             <Button className="button">BOOK A SERVICE</Button>
           </Link>
         </div>
