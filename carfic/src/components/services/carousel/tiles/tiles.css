@@ -1,0 +1,66 @@
+.image-tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(300px, auto); /* Set a minimum height for the rows */
+    grid-gap: 10px;
+   }
+
+   .tile-image {
+    height: 200px; /* adjust as needed */
+    object-fit: cover; /* this will ensure the images cover the entire space without distortion */
+  }
+   
+   .tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Ensure each tile takes up the full width of its grid cell */
+   }
+   
+   .tile img {
+    width: 100%;
+    height: auto; /* Adjust the height automatically based on the width */
+    object-fit: cover; /* Ensure the image covers the available space without stretching */
+   }
+   
+   .tile h3 {
+    margin: 10px 0;
+   }
+   
+   .tile button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+   }
+   
+   .tile button:hover {
+    background-color: #0056b3;
+   }
+   
+   /* Responsive design for various screen sizes */
+   @media (min-width: 576px) {
+    .image-tiles {
+       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+   }
+   
+   @media (min-width: 768px) {
+    .image-tiles {
+       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+   }
+   
+   @media (min-width: 992px) {
+    .image-tiles {
+       grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+   }
+   
+   @media (min-width: 1200px) {
+    .image-tiles {
+       grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+   }
