@@ -1,0 +1,68 @@
+import React from 'react';
+import './booking.css';
+
+const Booking = () => {
+  return (
+    <div className="booking-container">
+      <h1>Book a service</h1>
+      <form className="booking-form">
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="firstName">First Name *</label>
+            <input type="text" id="firstName" name="firstName" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="lastName">Last Name *</label>
+            <input type="text" id="lastName" name="lastName" required />
+          </div>
+        </div>
+
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="email">Email ID *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="phone">Phone/Mobile *</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="vehicleMakeModel">Vehicle Make Model *</label>
+          <input type="text" id="vehicleMakeModel" name="vehicleMakeModel" required />
+        </div>
+
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="vehicleRegn">Vehicle Regn *</label>
+            <input type="text" id="vehicleRegn" name="vehicleRegn" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="vehicleId">Vehicle Identification Number *</label>
+            <input type="text" id="vehicleId" name="vehicleId" required />
+          </div>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="appointmentDate">Appointment Date *</label>
+          <input type="date" id="appointmentDate" name="appointmentDate" required />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="uploadDocument">Upload a Document or Image</label>
+          <input type="file" id="uploadDocument" name="uploadDocument" accept=".pdf,.jpg,.png" />
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="serviceRequired">Service(s) Required</label>
+          <textarea id="serviceRequired" name="serviceRequired" rows="4"></textarea>
+        </div>
+
+        <button type="submit">Submit Form</button>
+      </form>
+    </div>
+  );
+}
+
+export default Booking;
