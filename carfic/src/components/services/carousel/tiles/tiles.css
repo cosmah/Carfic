@@ -39,6 +39,28 @@
    .tile button:hover {
     background-color: #0056b3;
    }
+
+   .image-tiles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .tile {
+      flex: 1 0 200px;
+      margin: 10px;
+    }
+    
+    @media (max-width: 600px) {
+      .image-tiles {
+        flex-direction: column;
+      }
+    
+      .tile {
+        flex: 1 0 auto;
+        margin: 10px 0;
+      }
+    }
    
    /* Responsive design for various screen sizes */
    @media (min-width: 576px) {
