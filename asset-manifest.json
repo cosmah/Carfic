@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Carfic/static/css/main.8d559b6a.css",
+    "main.css": "/Carfic/static/css/main.97fb65dc.css",
     "main.js": "/Carfic/static/js/main.3e5c877b.js",
     "static/js/453.01c7acef.chunk.js": "/Carfic/static/js/453.01c7acef.chunk.js",
     "static/media/spares1.png": "/Carfic/static/media/spares1.242b3c43923b2bb38891.png",
@@ -39,12 +39,12 @@
     "static/media/fa-v4compatibility.ttf": "/Carfic/static/media/fa-v4compatibility.c8e090db312b0bea2aa2.ttf",
     "static/media/fa-v4compatibility.woff2": "/Carfic/static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2",
     "index.html": "/Carfic/index.html",
-    "main.8d559b6a.css.map": "/Carfic/static/css/main.8d559b6a.css.map",
+    "main.97fb65dc.css.map": "/Carfic/static/css/main.97fb65dc.css.map",
     "main.3e5c877b.js.map": "/Carfic/static/js/main.3e5c877b.js.map",
     "453.01c7acef.chunk.js.map": "/Carfic/static/js/453.01c7acef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8d559b6a.css",
+    "static/css/main.97fb65dc.css",
     "static/js/main.3e5c877b.js"
   ]
 }
