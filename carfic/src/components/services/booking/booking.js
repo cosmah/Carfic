@@ -1,81 +1,52 @@
 import React from "react";
 import "./booking.css";
-import {
-  MDBBtn,
-  MDBConta
-  iner,
-  MDBCard,
-  MDBCardBody,
-  MDBCardImage,
-  MDBRow,
-  MDBCol,
-  MDBInput,
-  MDBSelect
-}
-from 'mdb-react-ui-kit';
-https://mdbootstrap.com/docs/react/extended/registration-form/
+import { Link } from "react-router-dom";
 
 const Booking = () => {
   return (
-    <MDBContainer fluid>
+    <div className="booking-container">
+      <h1>SERVICE BOOKING</h1>
+      <form className="booking-form">
+        <div className="form-group">
+          <label htmlFor="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" required />
+        </div>
+        <div className="form-group">
+          <label htmlFor="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" required />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div className="form-group">
+          <label htmlFor="phone">Phone/Mobile</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div className="form-group">
+          <label htmlFor="vehicleMakeModel">VEHICLE MAKE / MODEL</label>
+          <input type="text" id="vehicleMakeModel" name="vehicleMakeModel" required />
+        </div>
+        <div className="form-group">
+          <label htmlFor="vin">VEHICLE IDENTIFICATION NUMBER</label>
+          <input type="text" id="vin" name="vin" required />
+        </div>
+        <div className="form-group">
+          <label htmlFor="fileUpload">Upload a document or image</label>
+          <input type="file" id="fileUpload" name="fileUpload" />
+        </div>
 
-    <MDBRow className='d-flex justify-content-center align-items-center'>
+        <div className="form-group">
+          <label htmlFor="serviceDate">DESCRIPTION</label>
+          <input type="text" id="description" name="description" required />
+        </div>
 
-      <MDBCol lg='8'>
+        {/* Add other form fields as needed */}
+        <button type="submit">Submit Form</button>
+      </form>
+      {/* <Link to="/">Go Back</Link> */}
+    </div>
+  );
+};
 
-        <MDBCard className='my-5 rounded-3' style={{maxWidth: '600px'}}>
-          <MDBCardImage src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp' className='w-100 rounded-top'  alt="Sample photo"/>
-
-          <MDBCardBody className='px-5'>
-
-            <h3 className="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3>
-            <MDBInput wrapperClass='mb-4' label='Name' id='form1' type='text'/>
-
-            <MDBRow>
-
-              <MDBCol md='6'>
-                <MDBInput wrapperClass='datepicker mb-4' label='Select a date' id='form2' type='text'/>
-              </MDBCol>
-
-              <MDBCol md='6' className='mb-4'>
-                <MDBSelect
-                  data={[
-                    { text: 'Gender', value: 1, disabled: true },
-                    { text: 'Female', value: 2 },
-                    { text: 'Male', value: 3 }
-                  ]}
-                  />
-              </MDBCol>
-
-            </MDBRow>
-
-            <MDBSelect
-              className='mb-4'
-              data={[
-                { text: 'Class', value: 1, disabled: true },
-                { text: 'Class 1', value: 2 },
-                { text: 'Class 2', value: 3 },
-                { text: 'Class 3', value: 3 }
-              ]}
-              />
-
-            <MDBRow>
-              <MDBCol md='6'>
-                <MDBInput wrapperClass='mb-4' label='Registration code' id='form3' type='text'/>
-              </MDBCol>
-            </MDBRow>
-
-            <MDBBtn color='success' className='mb-4' size='lg'>Submit</MDBBtn>
-
-          </MDBCardBody>
-        </MDBCard>
-
-      </MDBCol>
-    </MDBRow>
-
-  </MDBContainer>
-);
-}
-
- 
 export default Booking;
