@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Carfic/static/css/main.54f4d9de.css",
-    "main.js": "/Carfic/static/js/main.046fe920.js",
+    "main.js": "/Carfic/static/js/main.38f316cb.js",
     "static/js/453.01c7acef.chunk.js": "/Carfic/static/js/453.01c7acef.chunk.js",
     "static/media/spares1.png": "/Carfic/static/media/spares1.242b3c43923b2bb38891.png",
     "static/media/mec.png": "/Carfic/static/media/mec.a7437d435b35ffe03ff1.png",
@@ -40,11 +40,11 @@
     "static/media/fa-v4compatibility.woff2": "/Carfic/static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2",
     "index.html": "/Carfic/index.html",
     "main.54f4d9de.css.map": "/Carfic/static/css/main.54f4d9de.css.map",
-    "main.046fe920.js.map": "/Carfic/static/js/main.046fe920.js.map",
+    "main.38f316cb.js.map": "/Carfic/static/js/main.38f316cb.js.map",
     "453.01c7acef.chunk.js.map": "/Carfic/static/js/453.01c7acef.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.54f4d9de.css",
-    "static/js/main.046fe920.js"
+    "static/js/main.38f316cb.js"
   ]
 }
