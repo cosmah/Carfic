@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./booking.css";
+import {db} from '../../../firebase';
 
 
 const Booking = () => {
