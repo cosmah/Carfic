@@ -3,6 +3,44 @@ import "./booking.css";
 
 
 const Booking = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [vehicleMakeModel, setVehicleMakeModel] = useState("");
+  const [vin, setVin] = useState("");
+  const [fileUpload, setFileUpload] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleSubmit =(e) => {
+    e.preventDefault();
+  
+    db.collection('bookings').add({
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      phone: phone,
+      vehicleMakeModel: vehicleMakeModel,
+      vin: vin,
+      fileUpload: fileUpload,
+      description: description, // use description instead of setDescription
+    })
+    .then(()=>{
+      alert("Message has been submitted successfully.")
+    })
+    .catch((error)=>{
+      alert(error.message);
+    });
+  
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPhone("");
+    setVehicleMakeModel("");
+    setVin("");
+    setFileUpload("");
+    setDescription("");
+  }
 
   return (
     <div className="booking-container">
