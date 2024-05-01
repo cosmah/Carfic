@@ -1,6 +1,7 @@
 // Form.js
 import React, { useState } from "react";
 import "./form.css"; // Import the CSS file
+import { db } from "../../../firebase";
 
 const Form = () => {
   const [formData, setFormData] = useState({
