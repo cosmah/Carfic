@@ -4,27 +4,6 @@ import "./form.css"; // Import the CSS file
 import { db } from "../../../firebase";
 
 const Form = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-    acceptPolicy: false,
-  });
-
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === "checkbox" ? checked : value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
-  };
 
   const Button = ({ children, ...props }) => {
     return (
@@ -43,15 +22,22 @@ const Form = () => {
     );
   };
 
+
   return (
     <form
-      onSubmit={handleSubmit}
+      name="contact v1"
+      method="post"
+      data-netlify="true"
+      onSubmit="submit"
       style={{
         backgroundColor: "#bdbcbc",
         padding: "20px",
         borderRadius: "8px",
       }}
     >
+
+      <input type="hidden" name="form-name" value="contact v1" />
+
       <div
         style={{
           display: "flex",
@@ -63,8 +49,7 @@ const Form = () => {
           type="text"
           name="name"
           placeholder="Name"
-          value={formData.name}
-          onChange={handleChange}
+          
           style={{
             flex: "1",
             padding: "10px",
@@ -79,8 +64,7 @@ const Form = () => {
           name="email"
           placeholder="Email*"
           required
-          value={formData.email}
-          onChange={handleChange}
+          
           style={{
             flex: "1",
             padding: "10px",
@@ -94,8 +78,7 @@ const Form = () => {
           type="tel"
           name="phone"
           placeholder="Phone"
-          value={formData.phone}
-          onChange={handleChange}
+          
           style={{
             flex: "1",
             padding: "10px",
@@ -110,8 +93,7 @@ const Form = () => {
         name="message"
         placeholder="Message*"
         required
-        value={formData.message}
-        onChange={handleChange}
+        
         style={{
           width: "100%",
           height: "100px",
@@ -140,8 +122,7 @@ const Form = () => {
           <input
             type="checkbox"
             name="acceptPolicy"
-            checked={formData.acceptPolicy}
-            onChange={handleChange}
+          
             style={{ marginRight: "10px" }}
           />
           I accept the privacy policy
