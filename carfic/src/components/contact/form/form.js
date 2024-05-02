@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 // Form.js
 import React, { useState } from "react";
 import "./form.css"; // Import the CSS file
-import { db } from "../../../firebase";
+
 
 const Form = () => {
 
