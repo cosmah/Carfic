@@ -1,4 +1,5 @@
 // index.js
+/* eslint-disable */
 import React from "react";
 import "./index.css";
 import logo from "../../assets/image/fic/logo.jpeg"; // Correcting the path
