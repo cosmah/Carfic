@@ -1,63 +1,67 @@
-/* global google */
+import React, { useState, useEffect } from 'react';
+import { GoogleMap, Marker, DirectionsRenderer } from '@react-google-maps/api';
 
-/* eslint-disable */
+const Locator = () => {
+  const [map, setMap] = useState(null);
+  const [directionsResponse, setDirectionsResponse] = useState(null);
+  const markerPosition = useState({ lat: 0.3461648898330333, lng: 32.646774982820716 })[0];
 
-import React, { useEffect, useState } from 'react';
-import { Loader } from '@googlemaps/js-api-loader';
-import './map.css';
-
-const Locator = ({ apiKey }) => {
- const [map, setMap] = useState(null);
- const [infoWindow, setInfoWindow] = useState(null);
-
- useEffect(() => {
+  useEffect(() => {
     const loadGoogleMaps = async () => {
       try {
-        const loader = new Loader({
-          apiKey: apiKey,
-          version: 'weekly',
-        });
-
-        await loader.load();
-        const mapInstance = new google.maps.Map(document.getElementById('map'), {
-          center: { lat: 0.3461648898330333, lng: 32.646774982820716 },
+        const mapInstance = new window.google.maps.Map(document.getElementById('map'), {
+          center: markerPosition,
           zoom: 15,
         });
-
-        // Create a marker at the specified location
-        const marker = new google.maps.Marker({
-          position: { lat: 0.3461648898330333, lng: 32.646774982820716 },
+  
+        new window.google.maps.Marker({
+          position: markerPosition,
           map: mapInstance,
           title: "Carfic Automotive Services and spare parts",
         });
+  
+        const directionsRequest = {
+          origin: 'Kireka, Kampala, Uganda',
+          destination: 'Kampala, Uganda',
+          travelMode: 'driving',
+        };
 
-        // Create an InfoWindow
-        const infoWindowInstance = new google.maps.InfoWindow({
-          content: '<div><h2>Carfic Automotive Services and spare parts</h2><p>Kireka, opposite Kireka police station, Kampala, Uganda</p></div>',
-        });
-
-        // Add a click event listener to the marker to open the InfoWindow
-        marker.addListener('click', () => {
-          infoWindowInstance.open({
-            anchor: marker,
-            map: mapInstance,
-            shouldFocus: false,
-          });
+        const directionsService = new window.google.maps.DirectionsService();
+        directionsService.route(directionsRequest, (response, status) => {
+          if (status === 'OK') {
+            setDirectionsResponse(response);
+          } else {
+            console.error('Error getting directions:', status);
+          }
         });
 
         setMap(mapInstance);
-        setInfoWindow(infoWindowInstance);
       } catch (error) {
         console.error('Error loading Google Maps API:', error);
       }
     };
 
     loadGoogleMaps();
- }, [apiKey]);
+  }, [markerPosition]);
 
- return (
-    <div id="map" style={{ width: '100%', height: '100vh' }}></div>
- );
+  return (
+    <div id="map" style={{ width: '100%', height: '100vh' }}>
+      {map && (
+        <GoogleMap
+          map={map}
+          center={{ lat: 0.3461648898330333, lng: 32.646774982820716 }}
+          zoom={15}
+        >
+          {markerPosition && (
+            <Marker position={markerPosition} />
+          )}
+          {directionsResponse && (
+            <DirectionsRenderer directions={directionsResponse} />
+          )}
+        </GoogleMap>
+      )}
+    </div>
+  );
 };
 
 export default Locator;
