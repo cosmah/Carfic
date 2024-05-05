@@ -13,9 +13,12 @@ const RoutingComponent = () => {
 
   return (
     <nav className="nav-bar">
-      <Link to="/">
+      <div className="logo">
+        <Link to="/">
           <img src={logo} alt="Logo" /> {/* Replace placeholder with logo */}
         </Link>
+        
+      </div>
       <ul className={`nav-links ${isOpen ? "show-menu" : ""}`}>
         <div className="close" onClick={toggleMenu}>
           X
