@@ -2,9 +2,15 @@
 // Form.js
 import React, { useState } from "react";
 import "./form.css"; // Import the CSS file
+import { useForm, ValidationError } from '@formspree/react';
 
 
 const Form = () => {
+
+  const [state, handleSubmit] = useForm("mgegdrpe");
+  if (state.succeeded) {
+      return <p>Thanks for joining!</p>;
+  }
 
   const Button = ({ children, ...props }) => {
     return (
@@ -27,9 +33,7 @@ const Form = () => {
   return (
     <form
       name="contact v1"
-      method="post"
-      data-netlify="true"
-      onSubmit="submit"
+      onSubmit={handleSubmit}
       style={{
         backgroundColor: "#bdbcbc",
         padding: "20px",
@@ -37,7 +41,6 @@ const Form = () => {
       }}
     >
 
-      <input type="hidden" name="form-name" value="contact v1" />
 
       <div
         style={{
@@ -60,6 +63,11 @@ const Form = () => {
             opacity: "0.8",
           }}
         />
+        <ValidationError 
+        prefix="Name" 
+        field="name"
+        errors={state.errors}
+      />
         <input
           type="email"
           name="email"
@@ -75,6 +83,11 @@ const Form = () => {
             opacity: "0.8",
           }}
         />
+        <ValidationError 
+        prefix="Email" 
+        field="email"
+        errors={state.errors}
+      />
         <input
           type="tel"
           name="phone"
@@ -89,6 +102,11 @@ const Form = () => {
             opacity: "0.8",
           }}
         />
+        <ValidationError 
+        prefix="Phone" 
+        field="phone"
+        errors={state.errors}
+      />
       </div>
       <textarea
         name="message"
@@ -104,6 +122,11 @@ const Form = () => {
           marginBottom: "10px",
           opacity: "0.8",
         }}
+      />
+      <ValidationError 
+        prefix="Message" 
+        field="message"
+        errors={state.errors}
       />
       <div
         style={{
@@ -126,16 +149,27 @@ const Form = () => {
           
             style={{ marginRight: "10px" }}
           />
+          <ValidationError 
+        prefix="AcceptPolicy" 
+        field="acceptPolicy"
+        errors={state.errors}
+      />
           I accept the privacy policy
         </label>
         <div></div>
         <div></div>
-        <Button type="submit" style={{ alignSelf: "flex-start" }}>
-          Send
-        </Button>
+        <button type="submit" disabled={state.submitting}>
+        Submit
+      </button>
       </div>
     </form>
   );
 };
+
+function App() {
+  return (
+    <ContactForm />
+  );
+}
 
 export default Form;
