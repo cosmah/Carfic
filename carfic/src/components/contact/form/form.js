@@ -168,7 +168,7 @@ const Form = () => {
 
 function App() {
   return (
-    <ContactForm />
+    <Form />
   );
 }
 
