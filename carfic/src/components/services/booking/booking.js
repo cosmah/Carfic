@@ -3,7 +3,7 @@ import "./booking.css";
 import { useForm, ValidationError } from "@formspree/react";
 
 const Booking = () => {
-  const [state] = useForm("xpzvbkka");
+  const [state, handleSubmit] = useForm("xpzvbkka");
   if (state.succeeded) {
     return <Booking />;
   }
@@ -11,11 +11,7 @@ const Booking = () => {
   return (
     <div className="booking-container">
       <h1>SERVICE BOOKING</h1>
-      <form className="booking-form" 
-  action="https://formspree.io/f/xpzvbkka"
-  method="POST"
-  enctype="multipart/form-data"
->
+      <form className="booking-form" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="firstName">First Name</label>
           <input type="text" id="firstName" name="firstName" required />
@@ -63,7 +59,7 @@ const Booking = () => {
           <input type="text" id="vin" name="vin" required />
           <ValidationError prefix="Vin" field="vin" errors={state.errors} />
         </div>
-        <div className="form-group">
+        {/* <div className="form-group">
           <label htmlFor="fileUpload">Upload a document or image</label>
           <input type="file" id="fileUpload" name="fileUpload" />
           <ValidationError
@@ -71,7 +67,7 @@ const Booking = () => {
             field="fileUpload"
             errors={state.errors}
           />
-        </div>
+        </div> */}
 
         <div className="form-group">
           <label htmlFor="description">DESCRIPTION</label>
@@ -84,7 +80,9 @@ const Booking = () => {
         </div>
 
         {/* Add other form fields as needed */}
-        <button type="submit">Submit</button>
+        <button type="submit" disabled={state.submitting}>
+          Submit
+        </button>
       </form>
       {/* <Link to="/">Go Back</Link> */}
     </div>
@@ -92,9 +90,7 @@ const Booking = () => {
 };
 // eslint-disable-next-line
 function App() {
-  return (
-    <Booking/>
-  );
+  return <Booking />;
 }
 
 export default Booking;
