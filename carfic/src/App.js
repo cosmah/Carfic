@@ -30,6 +30,7 @@ import Booking from "./components/services/booking/booking";
 import MyCarousel from "./components/services/carousel/carousel";
 import Tiles from "./components/services/carousel/tiles/tiles";
 import Tow from "./components/services/carousel/tow/tow";
+import Privacy from "./components/contact/privacy/privacy";
 
 
 function App() {
@@ -64,6 +65,7 @@ function App() {
         <Route path="/booking" element={<Booking/>}/>
         <Route path="/tiles" element ={<Tiles/>}/>
         <Route path="/tow" element={<Tow/>}/>
+        <Route path="/privacy" element={<Privacy/>}/>
 
       </Routes>
   

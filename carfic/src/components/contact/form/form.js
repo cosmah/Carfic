@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import "./form.css"; // Import the CSS file
 import { useForm, ValidationError } from '@formspree/react';
-
+import { Link } from 'react-router-dom'; 
 
 const Form = () => {
 
@@ -156,7 +156,7 @@ const Form = () => {
         field="acceptPolicy"
         errors={state.errors}
       />
-          I accept the privacy policy
+           <Link to="/privacy">I accept the privacy policy</Link> {/* Wrap the text with Link */}
         </label>
         <div></div>
         <div></div>
