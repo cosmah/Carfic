@@ -1,95 +1,48 @@
-import React, { useState } from "react";
+import React from "react";
 import "./booking.css";
-import {db} from '../../../firebase';
-
+import { useForm, ValidationError } from "@formspree/react";
 
 const Booking = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [vehicleMakeModel, setVehicleMakeModel] = useState("");
-  const [vin, setVin] = useState("");
-  const [fileUpload, setFileUpload] = useState("");
-  const [description, setDescription] = useState("");
-
-  const handleSubmit =(e) => {
-    e.preventDefault();
-  
-    db.collection('bookings').add({
-      firstName: firstName,
-      lastName: lastName,
-      email: email,
-      phone: phone,
-      vehicleMakeModel: vehicleMakeModel,
-      vin: vin,
-      fileUpload: fileUpload,
-      description: description, // use description instead of setDescription
-    })
-    .then(()=>{
-      alert("Message has been submitted successfully.")
-    })
-    .catch((error)=>{
-      alert(error.message);
-    });
-  
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setPhone("");
-    setVehicleMakeModel("");
-    setVin("");
-    setFileUpload("");
-    setDescription("");
+  const [state] = useForm("xpzvbkka");
+  if (state.succeeded) {
+    return <Booking />;
   }
 
   return (
     <div className="booking-container">
       <h1>SERVICE BOOKING</h1>
-      <form className="booking-form" onSubmit={handleSubmit}>
+      <form className="booking-form" 
+  action="https://formspree.io/f/xpzvbkka"
+  method="POST"
+  enctype="multipart/form-data"
+>
         <div className="form-group">
           <label htmlFor="firstName">First Name</label>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            required
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
+          <input type="text" id="firstName" name="firstName" required />
+          <ValidationError
+            prefix="FirstName"
+            field="firstName"
+            errors={state.errors}
           />
         </div>
         <div className="form-group">
           <label htmlFor="lastName">Last Name</label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            required
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
+          <input type="text" id="lastName" name="lastName" required />
+          <ValidationError
+            prefix="LastName"
+            field="lastName"
+            errors={state.errors}
           />
         </div>
         <div className="form-group">
           <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+          <input type="email" id="email" name="email" required />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
         </div>
         <div className="form-group">
           <label htmlFor="phone">Phone/Mobile</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            required
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          />
+          <input type="tel" id="phone" name="phone" required />
+          <ValidationError prefix="Phone" field="phone" errors={state.errors} />
         </div>
         <div className="form-group">
           <label htmlFor="vehicleMakeModel">VEHICLE MAKE / MODEL</label>
@@ -98,50 +51,50 @@ const Booking = () => {
             id="vehicleMakeModel"
             name="vehicleMakeModel"
             required
-            value={vehicleMakeModel}
-            onChange={(e) => setVehicleMakeModel(e.target.value)}
+          />
+          <ValidationError
+            prefix="VehicleMakeModel"
+            field="vehicleMakeModel"
+            errors={state.errors}
           />
         </div>
         <div className="form-group">
           <label htmlFor="vin">VEHICLE IDENTIFICATION NUMBER</label>
-          <input
-            type="text"
-            id="vin"
-            name="vin"
-            required
-            value={vin}
-            onChange={(e) => setVin(e.target.value)}
-          />
+          <input type="text" id="vin" name="vin" required />
+          <ValidationError prefix="Vin" field="vin" errors={state.errors} />
         </div>
         <div className="form-group">
           <label htmlFor="fileUpload">Upload a document or image</label>
-          <input
-            type="file"
-            id="fileUpload"
-            name="fileUpload"
-            value={fileUpload}
-            onChange={(e) => setFileUpload(e.target.value)}
+          <input type="file" id="fileUpload" name="fileUpload" />
+          <ValidationError
+            prefix="FileUpload"
+            field="fileUpload"
+            errors={state.errors}
           />
         </div>
 
         <div className="form-group">
           <label htmlFor="description">DESCRIPTION</label>
-          <input
-            type="text"
-            id="description"
-            name="description"
-            required
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
+          <input type="text" id="description" name="description" required />
+          <ValidationError
+            prefix="description"
+            field="description"
+            errors={state.errors}
           />
         </div>
 
         {/* Add other form fields as needed */}
-        <button type="submit">Submit Form</button>
+        <button type="submit">Submit</button>
       </form>
       {/* <Link to="/">Go Back</Link> */}
     </div>
   );
 };
+// eslint-disable-next-line
+function App() {
+  return (
+    <Booking/>
+  );
+}
 
 export default Booking;
