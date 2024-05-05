@@ -9,7 +9,9 @@ const Form = () => {
 
   const [state, handleSubmit] = useForm("mgegdrpe");
   if (state.succeeded) {
-      return <p>Thanks for joining!</p>;
+    return (
+      <Form />
+    );
   }
 
   const Button = ({ children, ...props }) => {
@@ -166,7 +168,7 @@ const Form = () => {
   );
 };
 
-function App() {
+function Form() {
   return (
     <Form />
   );
