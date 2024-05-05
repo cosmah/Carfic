@@ -168,7 +168,7 @@ const Form = () => {
   );
 };
 
-function Form() {
+function App() {
   return (
     <Form />
   );
