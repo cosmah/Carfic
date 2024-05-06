@@ -1,67 +1,61 @@
-import React, { useState, useEffect } from 'react';
-import { GoogleMap, Marker, DirectionsRenderer } from '@react-google-maps/api';
+import React, { useState, useEffect } from "react";
+import {
+  GoogleMap,
+  useJsApiLoader,
+  Marker,
+  InfoWindow,
+} from "@react-google-maps/api";
 
-const Locator = () => {
+function Locator() {
+  const { isLoaded } = useJsApiLoader({
+    id: "google-maps-script",
+    googleMapsApiKey: "AIzaSyB2zVgM_dD8x_Jt15NzU1fLN31DGD_8Rzg",
+  });
+
   const [map, setMap] = useState(null);
-  const [directionsResponse, setDirectionsResponse] = useState(null);
-  const markerPosition = useState({ lat: 0.3461648898330333, lng: 32.646774982820716 })[0];
+  const [markerPosition, setMarkerPosition] = useState({
+    lat: 0.3461378,
+    lng: 32.6467837,
+  });
+  const [showInfoWindow, setShowInfoWindow] = useState(false);
 
   useEffect(() => {
-    const loadGoogleMaps = async () => {
-      try {
-        const mapInstance = new window.google.maps.Map(document.getElementById('map'), {
+    if (isLoaded) {
+      const mapInstance = new window.google.maps.Map(
+        document.getElementById("map"),
+        {
           center: markerPosition,
           zoom: 15,
-        });
-  
-        new window.google.maps.Marker({
-          position: markerPosition,
-          map: mapInstance,
-          title: "Carfic Automotive Services and spare parts",
-        });
-  
-        const directionsRequest = {
-          origin: 'Kireka, Kampala, Uganda',
-          destination: 'Kampala, Uganda',
-          travelMode: 'driving',
-        };
-
-        const directionsService = new window.google.maps.DirectionsService();
-        directionsService.route(directionsRequest, (response, status) => {
-          if (status === 'OK') {
-            setDirectionsResponse(response);
-          } else {
-            console.error('Error getting directions:', status);
-          }
-        });
-
-        setMap(mapInstance);
-      } catch (error) {
-        console.error('Error loading Google Maps API:', error);
-      }
-    };
-
-    loadGoogleMaps();
-  }, [markerPosition]);
+        }
+      );
+      setMap(mapInstance);
+    }
+  }, [isLoaded, markerPosition]);
 
   return (
-    <div id="map" style={{ width: '100%', height: '100vh' }}>
-      {map && (
-        <GoogleMap
-          map={map}
-          center={{ lat: 0.3461648898330333, lng: 32.646774982820716 }}
-          zoom={15}
-        >
-          {markerPosition && (
-            <Marker position={markerPosition} />
-          )}
-          {directionsResponse && (
-            <DirectionsRenderer directions={directionsResponse} />
-          )}
+    <div id="map" style={{ width: "100%", height: "100vh" }}>
+      {isLoaded && map && (
+        <GoogleMap map={map} center={markerPosition} zoom={15}>
+          <Marker
+            position={markerPosition}
+            onClick={() => setShowInfoWindow(true)}
+          >
+            {showInfoWindow && (
+              <InfoWindow
+                position={markerPosition}
+                onCloseClick={() => setShowInfoWindow(false)}
+              >
+                <div>
+                  <h3>Carfic Automotive Services and spare parts</h3>
+                  <p>Location: 0.3461378, 32.6467837</p>
+                </div>
+              </InfoWindow>
+            )}
+          </Marker>
         </GoogleMap>
       )}
     </div>
   );
-};
+}
 
 export default Locator;
