@@ -1,5 +1,4 @@
-
-  import React from "react";
+import React from "react";
 import "./info.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
@@ -55,7 +54,7 @@ const Info = () => {
           <FontAwesomeIcon icon={faInstagram} />
         </a>
         <a
-          href="https://www.linkedin.com/in/yourusername"
+          href="https://www.linkedin.com/in/carfic-automotive-service-and-spare-parts-kireka-2a699a281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
           target="_blank"
           rel="noopener noreferrer"
         >

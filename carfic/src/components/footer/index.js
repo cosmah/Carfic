@@ -94,16 +94,16 @@ const Footer = () => {
           <a href="https://www.instagram.com/carfic_automotive_?utm_source=qr&igsh=MzNlNGNkZWQ4Mg==">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a href="https://twitter.com/home?utm_source=liteAPK&utm_medium=shortcut&first_run=false">
+          <a href="https://twitter.com/CarficService">
             <FontAwesomeIcon icon={faTwitter} />
           </a>
-          <a href="#">
+          <a href="https://api.whatsapp.com/send?phone=256757326751">
             <FontAwesomeIcon icon={faWhatsapp} />
           </a>
           <a href="https://www.tiktok.com/@monfickiss?_t=8m7fQQYUJeQ&_r=1">
             <FontAwesomeIcon icon={faTiktok} />
           </a>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/carfic-automotive-service-and-spare-parts-kireka-2a699a281?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
         </div>
