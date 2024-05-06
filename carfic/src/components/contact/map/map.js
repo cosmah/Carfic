@@ -13,7 +13,7 @@ function Locator() {
   });
 
   const [map, setMap] = useState(null);
-  const [markerPosition, setMarkerPosition] = useState({
+  const [markerPosition] = useState({
     lat: 0.3461378,
     lng: 32.6467837,
   });
@@ -47,7 +47,7 @@ function Locator() {
               >
                 <div>
                   <h3>Carfic Automotive Services and spare parts</h3>
-                  <p>Location: 0.3461378, 32.6467837</p>
+
                 </div>
               </InfoWindow>
             )}
