@@ -88,19 +88,19 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <div className="social-icons">
-          <a href="#">
+          <a href="https://www.facebook.com/profile.php?id=100088565874953">
             <FontAwesomeIcon icon={faFacebook} />
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com/carfic_automotive_?utm_source=qr&igsh=MzNlNGNkZWQ4Mg==">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a href="#">
+          <a href="https://twitter.com/home?utm_source=liteAPK&utm_medium=shortcut&first_run=false">
             <FontAwesomeIcon icon={faTwitter} />
           </a>
           <a href="#">
             <FontAwesomeIcon icon={faWhatsapp} />
           </a>
-          <a href="#">
+          <a href="https://www.tiktok.com/@monfickiss?_t=8m7fQQYUJeQ&_r=1">
             <FontAwesomeIcon icon={faTiktok} />
           </a>
           <a href="#">

@@ -34,21 +34,21 @@ const Info = () => {
       <p className="email">care@carfic.com</p>
       <div className="social-media-icons">
         <a
-          href="https://www.facebook.com/yourusername"
+          href="https://www.facebook.com/profile.php?id=100088565874953"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FontAwesomeIcon icon={faFacebook} />
         </a>
         <a
-          href="https://twitter.com/yourusername"
+          href="https://twitter.com/home?utm_source=liteAPK&utm_medium=shortcut&first_run=false"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FontAwesomeIcon icon={faTwitter} />
         </a>
         <a
-          href="https://www.instagram.com/yourusername"
+          href="https://www.instagram.com/carfic_automotive_?utm_source=qr&igsh=MzNlNGNkZWQ4Mg=="
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -62,7 +62,7 @@ const Info = () => {
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
         <a
-          href="https://www.tiktok.com/@yourusername"
+          href="https://www.tiktok.com/@monfickiss?_t=8m7fQQYUJeQ&_r=1"
           target="_blank"
           rel="noopener noreferrer"
         >
