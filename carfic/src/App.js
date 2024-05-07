@@ -69,7 +69,7 @@ function App() {
 
       </Routes>
   
-      {isMobile && <div>This is a mobile device.</div>}
+      {isMobile}
     </Router>
  );
 }
