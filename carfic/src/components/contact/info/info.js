@@ -30,7 +30,7 @@ const Info = () => {
         <br />
        +256  757326751
       </p>
-      <p className="email">care@carfic.com</p>
+      <p className="email">care@carfiq.com</p>
       <div className="social-media-icons">
         <a
           href="https://www.facebook.com/profile.php?id=100088565874953"

@@ -71,7 +71,7 @@ const Footer = () => {
                 <i className="fas fa-phone"></i> &nbsp; +256 757326751
               </span>
               <span>
-                <i className="fas fa-envelope"></i> &nbsp; care@carfic.com
+                <i className="fas fa-envelope"></i> &nbsp; care@carfiq.com
               </span>
               <span>
                 <i className="fas fa-map-marker-alt"></i> &nbsp; Kireka Town,
