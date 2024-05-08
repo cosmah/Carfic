@@ -31,6 +31,15 @@ const Booking = () => {
           />
         </div>
         <div className="form-group">
+          <label htmlFor="sdate">Service Booking sdate</label>
+          <input type="date" id="sdate" name="sdate" required />
+          <ValidationError
+            prefix="sdate"
+            field="sdate"
+            errors={state.errors}
+          />
+        </div>
+        <div className="form-group">
           <label htmlFor="email">Email</label>
           <input type="email" id="email" name="email" required />
           <ValidationError prefix="Email" field="email" errors={state.errors} />

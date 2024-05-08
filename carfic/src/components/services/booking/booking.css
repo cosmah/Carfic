@@ -45,3 +45,27 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #ffa908;
 }
+
+/* Style for the date input field */
+.form-group input[type="date"] {
+  width: 100%; /* Full width of the container */
+  padding: 10px; /* Add some padding */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Increase font size */
+  color: #333; /* Darker text color */
+  background-color: #f9f9f9; /* Light background color */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+ }
+ 
+ /* Style for the date input field on focus */
+ .form-group input[type="date"]:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Add a glow effect */
+ }
+ 
+ /* Style for the date input field on error */
+ .form-group input[type="date"]:invalid {
+  border-color: #dc3545; /* Change border color to indicate error */
+ }

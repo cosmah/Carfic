@@ -1,6 +1,6 @@
 import React from 'react';
 import './garage.css';
-import spare from "../../../assets/image/fic/29.jpeg";
+import spare from "../../../assets/image/fic/aimg.jpeg";
   
   const Garage = () =>  {
 	return (

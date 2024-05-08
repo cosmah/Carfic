@@ -8,8 +8,8 @@ const Privacy = () => {
       <p>Last updated: 05/April/2024</p>
       <h2>Introduction</h2>
       <p>
-        Welcome to Carfic Automotives (hereinafter referred to as "the
-        Website"). This privacy policy ("Policy") describes how Carfic collects,
+        Welcome to Carfiq Automotives (hereinafter referred to as "the
+        Website"). This privacy policy ("Policy") describes how Carfiq Automotives collects,
         protects, and uses the personally identifiable information ("Personal
         Information") you may provide through our forms on the Website. It also
         describes the choices available to you regarding our use of your
@@ -78,8 +78,7 @@ const Privacy = () => {
       </p>
       <h2>Contact Us</h2>
       <p>
-        If you have any questions about this Policy, please contact us at [Your
-        Contact Information].
+        If you have any questions about this Policy, please contact us at care@carfiq.com.
       </p>
     </div>
   );

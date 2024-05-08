@@ -6,7 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import garage from "../../../assets/image/fic/10.jpeg";
+import garage from "../../../assets/image/fic/aimg.jpeg";
 import lubs from "../../../assets/image/fic/oil.jpeg";
 import spares from "../../../assets/image/auto03pix.jpg";
 import { styled } from "@mui/system"; // Import styled from @mui/system

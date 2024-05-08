@@ -6,10 +6,12 @@ import car from '../../../assets/image/fic/76.jpeg';
 import spare from '../../../assets/image/fic/11.jpeg';
 import mec from '../../../assets/image/fic/60.jpeg';
 import garage from '../../../assets/image/fic/79.jpeg';
-import tech from '../../../assets/image/fic/spare77.jpeg'
+import tech from '../../../assets/image/fic/spare77.jpeg';
+import engine from '../../../assets/image/fic/egn1.jpeg';
+import body from '../../../assets/image/fic/cbody.jpeg';
 
 const Slide = () => {
-    const images = [car, spare, mec, garage,tech];
+    const images = [car, spare, mec, garage,tech,engine, body];
  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
  useEffect(() => {

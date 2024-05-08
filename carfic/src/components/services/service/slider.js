@@ -2,13 +2,13 @@
 import React, { useState, useEffect } from 'react';
 
 import car from '../../../assets/image/fic/12.jpeg';
-import spare from '../../../assets/image/fic/10.jpeg';
+import spare from '../../../assets/image/fic/aimg.jpeg';
 import mec from '../../../assets/image/fic/43.jpeg';
 import garage from '../../../assets/image/fic/64.jpeg';
-import tech from '../../../assets/image/fic/22.jpeg'
+import tech from '../../../assets/image/fic/xx.jpeg'
 
 const Slide = () => {
-    const images = [car, spare, mec, garage,tech];
+    const images = [spare,car,  mec, garage,tech];
  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
  useEffect(() => {
