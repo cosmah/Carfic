@@ -23,7 +23,7 @@ const Info = () => {
         <br />
         Saturday, 8 am – 6:30 pm
         <br />
-        Sunday, 8:30 am – 3 pm
+        Sunday and Public Holidays: Only open for appointments
       </address>
       <p className="phone-numbers">
         +256 786912172
