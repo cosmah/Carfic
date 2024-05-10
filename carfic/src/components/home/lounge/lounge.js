@@ -4,7 +4,7 @@ import "./lounge.css";
 const Lounge = () => {
   return (
     <div className="bg-div">
-       <h1 className="text-stroke">lOUNGE HERE</h1>
+       <h1 className="text-stroke"> OUR lOUNGE </h1>
 
       <div className="info">
         <p>

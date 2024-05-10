@@ -34,6 +34,7 @@
 
 .bg-div .info p {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .bg-div .info p:last-child {
